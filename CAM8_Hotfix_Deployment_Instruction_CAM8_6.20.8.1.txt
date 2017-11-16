@@ -1,0 +1,94 @@
+1.Incremental DB refresh according to instructions in section 1.13 under "Refreshing with Incremental Scripts:"  in BancsInstaller document.   
+    Note : No before and after Scripts in Scripts folder.
+	a)--To check for Adhoc Batches---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id =c.job_instance_id
+	AND b.end_time IS NULL
+	AND substr(c.JOB_NAME,4,INSTR(substr(c.JOB_NAME,4),'_')-1) IN ('113','120','163','165','176','181','2207','250','251','253','254','255','256','257','260','262','265','591','600','6010','610','611','630','65195','659','6668','6682','75','85003','85004');
+
+b)To check for SI Bulk file---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id =c.job_instance_id
+	AND b.end_time IS NULL
+	AND c.job_name like 'SI%ProcessorJob';
+
+c)To check for Scheduler---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id=c.job_instance_id
+	AND b.end_time IS NULL
+	AND (c.job_name NOT LIKE 'SI%ProcessorJob'
+	OR substr(c.JOB_NAME,4,INSTR(substr(c.JOB_NAME,4),'_')-1) NOT IN ('113','120','163','165','176','181','2207','250','251','253','254','255','256','257','260','262','265','591','600','6010','610','611','630','65195','659','6668','6682','75','85003','85004'));
+
+	
+The above query output should be '0'. then only BancsSpringIntranetAdhocProcessor,BancsSpringIntranetAdhocProcessor,scheduler and nap to be stopped.
+
+
+Services to be down:
+ 
+   1.Intranet
+   2.Extranet
+   3.BancsSpringExtranetAdhocProcessor
+   4.BancsSpringIntranetAdhocProcessor
+   5.Scheduler
+   6.NAP
+   7.SI both message and bulk engine
+   
+Note: Make sure(/check) DIR1 access provided for APPUSER or not.	
+
+
+
+1). Extract Hotfix_CAM8_6.20.8.1.7z from \\ukgswtowb10\g$\CAM8\CAM8_6.20.8.1 on Desktop
+
+ For Cluster Environment ::
+
+
+ --> Place Extranet folder in M:/BaNCSFS/BancsProduct. 
+ --> Place Intranet folder in M:/BaNCSFS/BancsProduct. 
+ --> Place SpringBatch & SI folder in E:/BancsProduct. (Both servers)
+ 
+ 
+ For Non-Cluster Environment ::
+ 
+ 
+  --> Place Extranet folder in M:/BaNCSFS/BancsProduct. 
+  --> Place Intranet folder in M:/BaNCSFS/BancsProduct. 
+  --> Place SpringBatch & SI folder in E:/BancsProduct. 
+
+
+Note : Whenever Extranet is delivered in Hotfix,please check web.xml to ensure details are as per environment.
+
+
+2).a)Please append the release version In MCSysProp.properties like this Environment=UAT2_v6.20.8.1
+
+  (in M:/BaNCSFS/BancsProduct/Intranet/properties/InputFiles) migrate this property file into DB
+  
+   b)Please remove roles COA:COA,ALW:ALW in ExtranetRoles (properties file) in Portal.Advisor.
+		
+     Portal.Advisor=MAS:MAS,SRM:SRM,SIV:SIV,ADN:ADN,IFA:IFA,ACC:ACC,BSR:BSR,TRD:TRD,VOC:VOC,VFC:VFC,VFA:VFA,BDD:BDD,EFA:EFA,EAC:EAC,DDM:DDM,PFM:PFM,PDA:PDA,PAM:PAM
+
+  
+
+3).Stop Admin service, delete all the folder in E:\Oracle\Middleware\user_projects\domains\Skandia\servers\AdminService, start the admin service.(Domain path will change According to the environmnet)
+
+4).Delete all folders at following path.(The target is clearing the cache in weblogic server ,Depending on the environment)
+	
+		
+		E:\Oracle\Middleware\user_projects\domains\Skandia\servers\Extranet-server (except security folder)
+		E:\Oracle\Middleware\user_projects\domains\Skandia\servers\Intranet-server (except security folder)
+		
+				
+5) Run GMT_Live.sql script.(\\UKGSWTOWB10\g$\Cam8)
+		
+
+6).Start Extranet, Intranet services.
+
+7).Once Extranet and Intranet Services are completely up then start BancsSpringExtranetAdhocProcessor,BancsSpringIntranetAdhocProcessor,Scheduler,NAP, SI both message and bulk services.
