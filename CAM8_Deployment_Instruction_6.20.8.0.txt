@@ -1,0 +1,228 @@
+1.Incremental DB refresh according to instructions in section 1.13 under "Refreshing with Incremental Scripts:"  in BancsInstaller document.   
+    Note : No before and after Scripts in Scripts folder.
+	a)--To check for Adhoc BAtchs---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id =c.job_instance_id
+	AND b.end_time IS NULL
+	AND substr(c.JOB_NAME,4,INSTR(substr(c.JOB_NAME,4),'_')-1) IN 			('113','120','163','165','176','181','2207','250','251','253','254','255','256','257','260','262','265','591','600','6010','610','611','630','65195','659','6668','6682','75','85003','85004');
+
+b)To check for SI Bulk file---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id =c.job_instance_id
+	AND b.end_time IS NULL
+	AND c.job_name like 'SI%ProcessorJob';
+
+c)To check for Scheduler---- (To Be Executed in BANCSDB user)
+
+	SELECT count(1)
+	FROM batch_job_execution b,
+	batch_job_instance c
+	WHERE b.job_instance_id=c.job_instance_id
+	AND b.end_time IS NULL
+	AND (c.job_name NOT LIKE 'SI%ProcessorJob'
+	OR substr(c.JOB_NAME,4,INSTR(substr(c.JOB_NAME,4),'_')-1) NOT IN ('113','120','163','165','176','181','2207','250','251','253','254','255','256','257','260','262','265','591','600','6010','610','611','630','65195','659','6668','6682','75','85003','85004'));
+
+	
+The above query output should be '0'. then only BancsSpringIntranetAdhocProcessor,BancsSpringIntranetAdhocProcessor,scheduler and nap to be stopped.
+
+Services to be down:
+ 
+   1.Intranet
+   2.Extranet
+   3.BancsSpringExtranetAdhocProcessor
+   4.BancsSpringIntranetAdhocProcessor
+   5.Schedular
+   6.NAP
+   7.SI both message and bulk engine
+   
+Note: Make sure(/check) DIR1 access provided for APPUSER or not.	
+
+1: sql_property_del_script.sql  -----------  To be run in BANCSDB.(\\UKGSWTOWB10\g$\Cam8)
+
+Note: After step 1 , weblogic deployement and script execution can run in parallel.
+
+
+	
+
+2. Script extract:
+		  i)  CAM8_DBSCRIPTS_10-23-2017.7z (\\UKGSWTOWB10\g$\CAM8\CAM8_6.20.8.0)
+		 
+		      Note: DB_Instructions.7z for Db scripts are available at the same path  along side the package.
+
+3. Run the New synonym provided for CAM8-(\\UKGSWTOWB10\g$\Cam8\Synonym_grant_CAM-8.sql) and latest GMT script (\\UKGSWTOWB10\g$\Cam8\).
+
+
+Note***** Before starting the code deployment please take the backup of Existing BancsProduct and BancsInstaller.
+
+Note***** Before starting the code deployment please make sure of all the profiles(Intranet,Extranet,Batch,SI) should be deleted from DB.
+
+
+4. Change entry in E:\BancsInstaller\Bin\Autoinstall.xml
+	 FROM 
+		<entry key="Env" value="UAT1_v6.*.*.*.*" />   
+		TO 
+ 		<entry key="Env" value="UAT1_v6.20.8.0"/>  Before running installer in cmd prompt. 
+
+  i)delete Temp folder from BancsInstaller  and BancsInstallerBatch before extract.
+  
+5.Delete Thumbs.db from E:\BancsInstaller.
+  
+6.Create SolvencyII_reports folder,Accurate folder in this path S:\BaNCSFS\BancsProduct\FinalReports
+
+7.Please take backup of .wsdl files and wsdlmetadata.xml file from both intranet and extranet.
+
+	wsdl files path
+	-----------------------------
+
+	M:\BaNCSFS\BancsProduct\Extranet\properties\XMLFiles
+	
+	M:\BaNCSFS\BancsProduct\Intranet\properties\XMLFiles
+
+
+8. Code installation according to instructions in section 1.11.2 "incremental Installation in BancsInstaller document". in BancsInstaller document.(File 
+
+name:\\Ukgswtowb10\g$\CAM8\CAM8_6.20.8.0\BancsInstaller_CAM8_6.20.8.0.7z). (UKGSWTOWB03 server will name changes depending on environment)
+     
+       Note : Latest version of PS_infrex.jar to be present
+       
+	***Note: Delete temp files in the Bancs Installer before starting deployment.   
+
+
+9. Change the files for enabling SSO according to instructions in section 1.20 under "Files to be Changed for SSO (SingleSignOn For Intranet):",
+
+   "Files to be Changed for S&R(Security & Roles For Extranet):"  in BancsInstaller document.
+   
+   note:Ignore this step if you have completed as part of Step 5.
+
+
+10. In ExtranetRoles.properties in the path M:\BaNCSFS\BancsProduct\Extranet\properties\InputFiles, change the below tags.
+	
+	
+	a)	WCMCONTENTURL=http://ukgswtcms03:8080  (Please cross check)(According to the environment this will(alfresco server name) change)
+				      
+	b)	Please add the Realex URL for UAT1 for RealexResponseTestURL=			  
+		(ex:
+		RealexResponseTestURL=https://194.36.216.227/Skandia/RealexServlet.srl (This change is Only for UAT2))
+
+        c)      Add new property in ExtranetRoles.properties as below:
+	
+		ExtranetENV_URL=http(s)://<uatextranet-domain>/Skandia/  (SNR URL)
+		
+	d)	Add new property in ExtranetRoles.properties as below:
+		
+		MostUsedCountry=GB:GB,AE:AE,HK:HK,IN:IN,SG:SG,BR:BR
+  
+  		PRIIPSRegulatoryMarket=UK:UK,EU:EU,SP:SP,SW:SW
+  		
+  	e)      Please add new roles COA:COA,ALW:ALW in ExtranetRoles (properties file) in Portal.Advisor.
+		
+		Portal.Advisor=MAS:MAS,SRM:SRM,SIV:SIV,ADN:ADN,IFA:IFA,ACC:ACC,BSR:BSR,TRD:TRD,VOC:VOC,VFC:VFC,VFA:VFA,BDD:BDD,EFA:EFA,EAC:EAC,DDM:DDM,PFM:PFM,PDA:PDA,PAM:PAM,COA:COA,ALW:ALW
+		
+	f)	Add(Modify if present) new properties in ExtranetRoles.properties as below:
+	
+		PRIIPSRegulatoryMarket=UK:UK,EU:EU,SP:SP,SW:SW
+		PRIIPSStaticLink=http://uat.fundslibrary.co.uk/FundsLibrary.DataRetrieval/Documents.aspx?type={0}&isin={1}&user={2}&lang={3}
+		PRIIPStype=packet_fund_unit_doc_priip_kid
+		PRIIPSusertype=OldMutualWealth-International
+		
+	g)    	Please add new role GSV:GSV in ExtranetRoles (properties file) under Portal.Customer.
+	
+		Portal.Customer=CUS:CUS,CTU:CTU,CTM:CTM,NIB:NIB,TOP:TOP,TRP:TRP,AMR:AMR,FSS:FSS,OOW:OOW,DIA:DIA,DIC:DIC,TOD:TOD,SDI:SDI,DIB:DIB,NRW:NRW,ARW:ARW,RRI:RRI,CRI:CRI,CLP:CLP,CRW:CRW,DCL:DCL,TCR:TCR,ARP:ARP,RRP:RRP,CRP:CRP,COC:COC,PIC:PIC,PIA:PIA,SAS:SAS,BDI:BDI,RBL:RBL,ARA:ARA,MTA:MTA,ARI:ARI,CHA:CHA,GPV:GPV,TSH:TSH,UMG:UMG,CAD:CAD,MCA:MCA,ABD:ABD,BDD:BDD,GSV:GSV
+
+
+11. Change the PASSCODE_URL(as per the lastest doc sent by S&R team) in below path
+
+	In ExtranetRoles.properties (M:\BaNCSFS\BancsProduct\Extranet\properties\InputFiles) 
+	
+	(Ex: These are shown for UAT2 env
+	
+	replace the below
+
+	#PASSCODE_URL=http://sip-wealthinteractive.skandiainternational.com/ChangePassword/ 
+
+	with
+
+	PASSCODE_URL=https://uatr2-sso.oldmutualinternational.com/oaam_server/userPreferences.do?showView=registerQuestions)		
+	
+	*****Note: Please refer Self Service Interface Design doc (latest)sent by S&R team.
+	
+
+12. Incremental Batch installation according to steps under heading "Steps for incremental Batch installation :" in section 1.11.2 (UKGSWTOWB03 depending on environment server name will changes)
+
+      ***Note: Delete temp files in the BancsInstallerBatch before deployment.
+
+      ****Note: Please add the below parameters in AutoinstallBatch.xml before deployment (No need to do the changes if it is already present).
+
+		<entry key="app_server_portE" value="8005"/>
+                <entry key="adminServerHost_value" value="UKGSWTOWB03"/>
+                <entry key="adminServerPwd_value" value="welcome1"/>
+                <entry key="adminServerUser_value" value="weblogic"/>
+                <entry key="adminServerPort_value" value="8001"/>
+
+	***Please provide the above values according to the environment details.
+
+         ****Note: Please place all .wsdl and Wsdlmetadata.xml files from M:\BaNCSFS\BancsProduct\Extranet\properties\XMLFiles 
+                   to E:\BancsProduct\SpringBatch\properties\XMLFiles.
+
+      
+      ***** Note :For service installation steps under heading "Batch Service Installation"
+   
+   Note : Latest version of PS_infrex.jar to be present
+
+		
+13. Change the below in E:\BancsProduct\SpringBatch\properties\InputFiles\BancsExceptionProp.properties 	
+
+		From
+			Exception.file.path=LOGFILE_PATH
+		TO
+			Exception.file.path=E:/BancsProduct/logs
+			
+
+14. Incremental SI installation according to heading in section 1.12 under "Incremental Installation SI:" in BancsInstaller document.
+
+(UKGSWTOWB09 depending on environment server name will changes)
+
+	(on SI server)).
+
+	Note:  Please add the below URL and RealexKey in RepositoryInstaller.properties before SI installation.(No need to do the changes if it is already present)
+
+               PROVIDER_URL=t3\://UKGSWTOWB09\:8003 (According to the environment server name will be changed) and 
+
+	       RealexKey=secret     (Newly added from CAM4B)
+		
+	       FLSIFLI.FILEBASEDIR=[path to SI datafiles]
+	       FLSIFLI.POLLTIME=1000
+	       Eg: FLSIFLI.FILEBASEDIR=S\:/BaNCSFS/BancsProduct/SI/datafiles
+
+		
+	
+	**** Note :For service installation steps under heading "SI Service Installation" 
+	
+	 
+	 Note: Latest version of PS_infrex.jar to be present
+
+ 
+    
+15.Run auth utility batch in weblogic server according to instructions shared in Batch-updateUIRoles.doc.
+
+
+16. Please replace <param-value>NoSnR</param-value>  with <param-value>SnRWithBypass</param-value>  in ( :\BancsProduct\Extranet\Bancs.ear\Bancs.war\WEB-INF\web.xml)
+		
+	
+17.Stop Admin service, delete all the folder in E:\Oracle\Middleware\user_projects\domains\Skandia\servers\AdminService, start the admin service.
+
+
+18.Delete all folders at following path in both the servers
+	E:\Oracle\Middleware\user_projects\domains\Skandia\servers\Extranet-server (except security folder)
+	E:\Oracle\Middleware\user_projects\domains\Skandia\servers\Intranet-server (except security folder)
+	
+	
+19. Start Intranet,Extranet services.
+
+20. Once Intranet and Extranet are completely up then start BancsSpringExtranetAdhocProcessor,BancsSpringIntranetAdhocProcessor, Batch ,SI services.
