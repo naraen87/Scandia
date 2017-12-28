@@ -1,0 +1,1 @@
+REM *********************Copy the extarcted folders to target server********************************************************
