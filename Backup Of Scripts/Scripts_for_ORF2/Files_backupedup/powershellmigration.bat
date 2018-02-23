@@ -1,0 +1,1 @@
+powershell -Command "& {Invoke-Command -ComputerName "10.66.216.141" {Invoke-Expression -Command:"cmd.exe /c 'E:\BancsInstaller\Property-Migration-Tool\IntranetMigration.bat'"}}

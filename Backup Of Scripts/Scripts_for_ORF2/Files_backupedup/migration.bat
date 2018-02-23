@@ -1,0 +1,3 @@
+set "migtration_tool_path=E:\BancsInstaller\Property-Migration-Tool"
+E:\Jenkins_Software\PSTools\PsExec.exe \\10.66.216.141 cmd /c "cd /d %migtration_tool_path% &IntranetMigration.bat"
+REM E:\Jenkins_Software\PSTools\PsExec.exe \\10.66.216.141 cmd /c "cd /d %migtration_tool_path% &E:/Java/jdk1.6.0_29\bin\java -classpath "E:/BancsInstaller\Property-Migration-Tool/lib/*"  -Dlog4j.configuration=log4j.xml com.tcs.migration.PropertyMigration "E:/properties/Migration"

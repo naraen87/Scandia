@@ -1,0 +1,9 @@
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Extranet\Bancs.ear\APP-INF\lib\AllClasses.jar
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Extranet\Bancs.ear\APP-INF\lib\Dao.jar
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Extranet\Bancs.ear\APP-INF\lib\PS.jar
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Intranet\Bancs.ear\APP-INF\lib\AllClasses.jar
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Intranet\Bancs.ear\APP-INF\lib\Dao.jar
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Intranet\Bancs.ear\APP-INF\lib\PS.jar
+\\10.66.216.141\E$\BancsProduct\Springbatch\lib\AllClasses.jar
+\\10.66.216.141\E$\BancsProduct\Springbatch\lib\Dao.jar
+\\10.66.216.141\E$\BancsProduct\Springbatch\lib\PS.jar

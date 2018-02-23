@@ -1,0 +1,16 @@
+non-cluster
+10.66.216.141
+10.47.36.90
+\\ukgswtowb10\g$\CAM8\CAM8_6.20.8.4
+Hotfix_CAM8_6.20.8.4.7z
+ORF2_v6.20.8.9
+MCSysProp.properties
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Intranet\properties\InputFiles
+\\vfs-or2-wi\bancs\BaNCSFS\BancsProduct\Extranet\Bancs.ear\Bancs.war\WEB-INF
+web.xml
+Users\Public
+"C:\Program Files\7-Zip\7z.exe"
+\\10.47.36.90\Users\Public\artifact_folder\Backup
+\\vfs-or2-wi\bancs\BaNCSFS
+\\vfs-or2-widata\bancs\BaNCSFS
+C:\Users\SVCT-WI-Jenkins\Desktop\Scripts_for_ORF2\Input_File_For_Deployment\backupfilenameandlocation.txt\\ukgswtowb10\g$\CAM8\CAM8_6.20.8.4
