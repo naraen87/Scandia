@@ -1,0 +1,267 @@
+ 
+Build v7.3.1e_cvr_brcd_602632_01_171020_0406 repackaged as v7.3.1e_cvr_brcd_602632_01 is/are available for SQA promotion
+
+
+/departments/sre/Builds/Scripts/promote_fos_to_sqa.ksh -r /scm_env_metadata/products/dev/fos/branches/v7.3.1e_cvr_brcd_602632/rspec/rspec -d v7.3.1e_cvr_brcd_602632_01_171020_0406
+
+
+v7.3.1e_cvr_brcd_602632_01_171020_0406
+
+v7.3.1e_cvr_brcd_602632_01
+
+00227012
+
+
+hq1-up-swe-02{119}: ct pwv
+Working directory view: mainlatest
+Set view: mainlatest
+hq1-up-swe-02{120}: pwd
+/scm_env_metadata/products/dev/fos/branches/v7.3.1e_cvr_brcd_602632/rspec
+hq1-up-swe-02{121}: ls
+rspec
+hq1-up-swe-02{122}: cat rspec
+#------------------------------------------------------------------------------
+# RELEASE SPECIFICATION FILE
+#------------------------------------------------------------------------------
+# Product specification for v7.3.1e_cvr_brcd_602632
+#------------------------------------------------------------------------------
+PRODUCT_ID="v7.3.1"
+NIGHTLY_DIR="/buildsjc/sre/Nightly/fos/v7.3.1/v7.3.1e_cvr_brcd_602632"
+
+##############################################################
+# Remedy related stuff..
+# Changes for each product
+##############################################################
+
+REMEDY_PRODUCT="FOS"
+REMEDY_BUILD_TYPE="CVR"
+REMEDY_RELEASE="FOS7.3.1"
+REMEDY_TESTEXPERT_SYNC="1"
+TT_BUILD_TYPE="CVR"
+TT_RELEASE="FOS7.3.1"
+SRV_TT_BLD_CATALOG_REPORT_ID="66615"
+
+##############################################################
+# Static data..
+##############################################################
+
+SQA_DIR="/buildsjc/sre/SQA/fos"
+PRODUCT_REL_DIR="${SQA_DIR}/${PRODUCT_ID}"
+
+#BLR_SQA_DIR="/departments/sre/SQA/fos"
+#BLR_PRODUCT_REL_DIR="${BLR_SQA_DIR}/${PRODUCT_ID}"
+
+##############################################################
+# Set the value of this variable to empty string ""
+# if you do not wish to copy this data over to BLR
+##############################################################
+
+blr_rcp=""
+
+##############################################################
+# Update defect status aggressively, That is release engineer
+# need not run the Remedy update script manually.
+##############################################################
+
+exec_remedy_update="1"
+
+##############################################################
+# LOC data file to be updated for this branch..
+##############################################################
+
+#loc_data_file="/departments/sre/LOC_DATA/v520_loc.csv"
+
+##############################################################
+# Identify if this is an external build. If the
+# value of this string is not empty ("") then
+# all files listed in the file EXCLUSION_LIST
+# will be excluded from the tar package
+##############################################################
+
+external_drop=""
+#EXTERNAL_EXCLUSION_LIST="/users/home/swrel/bin/exclude_these_for_external"
+
+##############################################################
+# Default label used for the build is $build_id in UPPERCASE
+# To skip the labeling step set skip_label to non-empty string
+##############################################################
+
+skip_label=""
+
+##############################################################
+# You can override the default build label convention by
+# explicitly naming it here
+##############################################################
+
+user_build_label=""
+
+##############################################################
+# Increment build numbers for next build
+##############################################################
+
+increment_build_number="1"
+
+##############################################################
+# Data specific for each release.. Must be updated
+# and reviewed before every SQA drop..
+##############################################################
+
+email_list="csonagar.com;jrangana.com;DL-GRP-GRP-HCL-Sustaining-Leads.com;cwang.COM;sw-rel-eng"
+patch_id="e"
+dev_build_id="__dev_build_id__"
+sqa_build_id="__sqa_build_id__"
+case_number="__case_number__"
+view_tag="__view_tag__"
+diff_report="__diff_report__"
+hq1-up-swe-02{123}:
+
+
+Example
+
+email_list="dramesh.com;DL-GRP-GRP-HCL-Sustaining-Leads;cwang.COM;gvelmuru.COM;sw-rel-eng"
+patch_id="d"
+dev_build_id="v7.4.1d_cvr_brcd_619050_01_170615_0746"
+sqa_build_id="v7.4.1d_cvr_brcd_619050_01"
+case_number="145730"
+view_tag="swrel_v7.4.1d_cvr_brcd_619050_01_170615_0746"
+diff_report="/buildsjc/sre/Nightly/fos/v7.4.1/v7.4.1d_cvr_brcd_619050/170615_0746/v7.4.1d_cvr_brcd_619050_01_170615_0746/release_diff_report.txt"
+
+
+email_list="csonagar.com;jrangana.com;DL-GRP-GRP-HCL-Sustaining-Leads.com;cwang.COM;sw-rel-eng"
+patch_id="e"
+dev_build_id="v7.3.1e_cvr_brcd_602632_01_171020_0406"
+sqa_build_id="v7.3.1e_cvr_brcd_602632_01"
+case_number="227012"
+view_tag="swrel_v7.3.1e_cvr_brcd_602632_01_171020_0406"
+diff_report="/buildsjc/sre/Nightly/fos/v7.3.1/v7.3.1e_cvr_brcd_602632/171020_0406/v7.3.1e_cvr_brcd_602632_01_171020_0406/release_diff_report.txt"
+
+
+email_list="csonagar.com;jrangana.com;DL-GRP-GRP-HCL-Sustaining-Leads.com;cwang.COM;sw-rel-eng"
+patch_id="e"
+dev_build_id="v7.3.1e_cvr_brcd_602632_01_171020_0406"
+sqa_build_id="v7.3.1e_cvr_brcd_602632_01"
+case_number="227012"
+view_tag="swrel_v7.3.1e_cvr_brcd_602632_01_171020_0406"
+diff_report="/buildsjc/sre/Nightly/fos/v7.3.1/v7.3.1e_cvr_brcd_602632/171020_0406/v7.3.1e_cvr_brcd_602632_01_171020_0406/release_diff_report.txt"
+
+
+
+hq1-up-swe-02{115}: cd /scm_env_metadata/products/dev/fos/branches/v7.3.1e_cvr_brcd_602632/rspec
+hq1-up-swe-02{116}: pwd
+/scm_env_metadata/products/dev/fos/branches/v7.3.1e_cvr_brcd_602632/rspec
+hq1-up-swe-02{117}: ls
+rspec
+hq1-up-swe-02{118}: ct co rspec
+Checked out "rspec" from version "/main/1".
+hq1-up-swe-02{119}: vi rspec
+hq1-up-swe-02{120}: ct diff -ser -pre rspec
+********************************
+<<< file 1: /scm_env_metadata/products/dev/fos/branches/v7.3.1e_cvr_brcd_602632/rspec/rspec@@/main/1
+>>> file 2: rspec
+********************************
+-----[89-93 changed to 89-94]-----
+< dev_build_id="__dev_build_id__"
+< sqa_build_id="__sqa_build_id__"
+< case_number="__case_number__"
+< view_tag="__view_tag__"
+< diff_report="__diff_report__"
+---
+> dev_build_id="v7.3.1e_cvr_brcd_602632_01_171020_0406"
+> sqa_build_id="v7.3.1e_cvr_brcd_602632_01"
+> case_number="227012"
+> view_tag="swrel_v7.3.1e_cvr_brcd_602632_01_171020_0406"
+> diff_report="/buildsjc/sre/Nightly/fos/v7.3.1/v7.3.1e_cvr_brcd_602632/171020_0406/v7.3.1e_cvr_brcd_602632_01_171020_0406/release_diff_report.txt"
+>
+hq1-up-swe-02{121}:
+
+hq1-up-swe-02{121}: ct ci -c "promoting cvr build v7.3.1e_cvr_brcd_602632_01" rspec
+No email will be sent;  exiting now.
+Checked in "rspec" version "/main/2".
+hq1-up-swe-02{122}:
+=================================================
+
+RUN Build on web page get 5 mails
+=====================================================
+hq1-up-swe-02{123}: cd /buildsjc/sre/CVR/fos
+hq1-up-swe-02{124}: chmod 775 v7.3.1
+hq1-up-swe-02{125}: cd v7.3.1
+hq1-up-swe-02{126}: mkdir v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{127}: cd v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{128}: pwd
+/buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{129}: cd /buildsjc/sre/SQA/fos
+hq1-up-swe-02{130}:  cd v7.3.1
+hq1-up-swe-02{131}: cd v7.3.1_tar
+hq1-up-swe-02{132}: ls -lrt
+total 15590332
+-r-xr-x--- 1 swrel rel-con2 1135716869 Dec  5  2014 v7.3.1_bld15.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135480927 Dec 11  2014 v7.3.1.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135545737 Mar 13  2015 v7.3.1a.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135959473 Jun 23  2015 v7.3.1b_rc1_bld11.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135686185 Jun 24  2015 v7.3.1b.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135986544 Aug 13  2015 v7.3.1c_rc1_bld05.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135699181 Aug 17  2015 v7.3.1c.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1136000802 Nov  4  2015 v7.3.1d_rc1_bld01.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135706562 Nov 11  2015 v7.3.1d.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1136079701 Apr 26  2016 v7.3.1e_rc1_bld02.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135835025 May 11  2016 v7.3.1e.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1136077252 Aug 12  2016 v7.3.1e1.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1135979973 Aug 23 23:17 v7.3.1c_cvr_brcd_644068_01.tar.gz*
+-r-xr-x--- 1 swrel rel-con2 1136036508 Oct 23 04:25 v7.3.1e_cvr_brcd_602632_01.tar.gz*
+-r-xr-x--- 1 swrel rel-con2         70 Oct 23 04:25 v7.3.1e_cvr_brcd_602632_01.md5*
+hq1-up-swe-02{133}: scp -r  v7.3.1e_cvr_brcd_602632_01.tar.gz /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{134}: cd /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{135}: ls -lrt
+total 1113784
+-r-xr-x--- 1 swrel sw-team 1136036508 Oct 23 04:31 v7.3.1e_cvr_brcd_602632_01.tar.gz*
+hq1-up-swe-02{136}:
+
+
+hq1-up-swe-02{134}: cd /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{135}: ls -lrt
+total 1113784
+-r-xr-x--- 1 swrel sw-team 1136036508 Oct 23 04:31 v7.3.1e_cvr_brcd_602632_01.tar.gz*
+hq1-up-swe-02{136}: clear
+hq1-up-swe-02{137}: ~/bin/targz2zip.ksh -s  v7.3.1e_cvr_brcd_602632_01.tar.gz*
++ src=''
++ typeset -x src
++ targ=''
++ typeset -x targ
++ [ 0 -ne 0 ]
++ /bin/ls -al /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01/v7.3.1e_cvr_brcd_602632_01.tar.gz /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01/v7.3.1e_cvr_brcd_602632_01.zip
+-r-xr-x--- 1 swrel sw-team 1136036508 Oct 23 04:31 /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01/v7.3.1e_cvr_brcd_602632_01.tar.gz
+-rw-rw-r-- 1 swrel sw-team 1136366271 Oct 23 04:34 /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01/v7.3.1e_cvr_brcd_602632_01.zip
++ cd /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
++ /bin/rm -fr /var/tmp/targ2zip_10005_20171023_043347
+hq1-up-swe-02{138}:
+
+hq1-up-swe-02{139}: /departments/sre/Builds/Scripts/generate_md5sum_data
++ pwd
++ cur_dir=/buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
++ typeset -x cur_dir
++ basename /buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
++ rel_ver=v7.3.1e_cvr_brcd_602632_01
++ typeset -x rel_ver
++ pwd
++ egrep -c '\/sre_fusion|sre\/DVR|Released|CVR|CCE|SQA|Nightly\/'
++ count=1
+
+
+hq1-up-swe-02{141}: pwd
+/buildsjc/sre/CVR/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{142}: cd ..
+hq1-up-swe-02{143}:  chown -R swrel:rel-con3  v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{144}: cd ..
+
+hq1-up-swe-02{149}:  chmod -R 550 v7.3.1e_cvr_brcd_602632_01
+hq1-up-swe-02{150}: cd ..
+hq1-up-swe-02{151}: chmod -R 550 v7.3.1
+hq1-up-swe-02{152}:
+
+
+/buildsjc/sre/SQA/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+\\buildsjc/sre/SQA/fos/v7.3.1/v7.3.1e_cvr_brcd_602632_01
+
+
+
+

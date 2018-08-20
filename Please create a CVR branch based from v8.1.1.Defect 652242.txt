@@ -1,0 +1,683 @@
+Please create a CVR branch based from v8.1.1.Defect 652242
+
+
+v8.1.1_cvr_brcd_652242 
+
+v8.1.1_cvr_brcd_652242_01
+
+V8.1.1_GA
+
+ct desc lbtype:V8.1.1_GA@/vobs/admin
+
+login as: swrel
+swrel@hq1-up-swe-02's password:
+Last login: Sun Oct  8 20:58:38 2017 from hq1-up-swe-02.brocade.com
+******************************************************************************
+  This server is managed by Puppet.  Please consult http://unixwiki/puppet.htm
+  before making configuration changes locally.
+
+  branch = production , puppetmaster = hq1-up-puppet-2.brocade.com
+
+******************************************************************************
+
+No such map hosts.byname. Reason: No such map in server's domain
+setting DISPLAY to hcl-d0q9j6amb2.corp.brocade.com:0.0
+hq1-up-swe-02{101}: ct setview mainlatest
+No such map hosts.byname. Reason: No such map in server's domain
+setting DISPLAY to hcl-d0q9j6amb2.corp.brocade.com:0.0
+hq1-up-swe-02{101}: ct pwv
+Working directory view: ** NONE **
+Set view: mainlatest
+hq1-up-swe-02{102}:
+hq1-up-swe-02{102}: ct desc lbtype:V8.1.1_GA@/vobs/admin
+label type "V8.1.1_GA" (locked)
+  created 2017-06-05T16:24:47-07:00 by Software Release - Email (swrel.sw-team@hq1-up-ecbld-902)
+  "# Checked-out elements
+   #
+   element * CHECKEDOUT
+   #
+   # Always grab top-of-tree for documentation.
+   #
+   element /vobs/multisite/intgtest/... /main/LATEST
+   element /vobs/projects/docs/... /main/LATEST
+   element /vobs/multisite/shared_docs/... /main/LATEST
+   element /vobs/multisite/sreglobal/... /main/LATEST
+   element /scm_env_metadata/... /main/LATEST
+   element /vobs/projects/springboard/build/... /main/LATEST
+   element /vobs/projects/springboard/toolchains /main/{!created_since(21-Sep-2012.00:56:43UTC)}
+   element /vobs/projects/springboard/toolchains/cn58xx-gcc4.1/... /main/{!created_since(11-Mar-2009.02:45:00UTC)}
+   element /vobs/projects/springboard/toolchains/cn68xx-gcc4.3/... /main/{!created_since(21-Nov-2013.23:30:00UTC)}
+   element /vobs/projects/springboard/toolchains/utils/scripts/cstyle /main/{!created_since(29-May-2009.23:42:09UTC)}
+   element /vobs/projects/springboard/toolchains/zvm/... /main/{!created_since(21-Jun-2013.22:23:00UTC)}
+   element /vobs/projects/springboard/toolchains/kmd/... /main/{!created_since(24-Mar-2013.01:33:25UTC)}
+   #element /vobs/projects/springboard/toolchains/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+   element /vobs/projects/springboard/target26/... /main/oss_fos_dev/123
+   element /vobs/projects/buildtools/... BUILDTOOLS_REL_20061030
+   element /vobs/projects/springboard/common_src/... /main/{!created_since(26-May-2016.10:06:04UTC)}
+   element /vobs/projects/springboard/oss/... /main/80 -nocheckout
+   element /vobs/projects/springboard/oss/shunit2/... /main/{!created_since(7-Jan-2011.04:00:08UTC)} -nocheckout
+   # New Tool Chain
+   element /vobs/projects/springboard/toolchains/ppc/gcc-3.4.6-glibc-2.3.6/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+   element /vobs/projects/springboard/toolchains/ppc/gcc-3.4.6-glibc-2.3.6-without-glibc-times-patch/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+   element /vobs/projects/springboard/toolchains/utils/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+   element /vobs/projects/springboard/toolchains/...  /main/{!created_since(07-Nov-2012.22:30:00UTC)}
+   # Mercury OSS
+   #element /vobs/projects/springboard/target26/... .../oss_mercury_dev/{!created_since(04-Dec-2013.21:55:00UTC)&&!version(.../oss_mercury_dev/0)}
+   #Skybolt OSS
+   element /vobs/projects/springboard/target26/... .../oss_skybolt_dev/oss_2634_v8.0.1_dev/oss_2634_fos_dev/{!created_since(18-May-2017.04:12:15UTC)}
+   # U-Boot
+   element /vobs/projects/springboard/prom/... .../mercury_prom_dev/{!created_since(14-Aug-2014.01:09:58UTC)&&!version(.../mercury_prom_dev/0)}
+   # HV begin
+   element /vobs/projects/springboard/tps_hvfreescale/... /main/{!created_since(29-Apr-2013.16:14:10UTC)}
+   # HV end
+
+   element * .../v8.1.x_maint/{!created_since(1-Jun-2017.11:26:24)&&!version(.../v8.1.x_maint/0)}
+   mkbranch v8.1.x_maint
+   element * V8.1.0_GA
+   element * /main/0
+   end mkbranch v8.1.x_maint
+
+   element /vobs/projects/springboard/tps/broadcom/... /main/{!created_since(11-Jan-2014.01:00:00UTC)}
+   # Following rules are for snapshot view..
+   # They do not affect dynamic views
+   #load /vobs/projects/springboard/build
+   #load /vobs/projects/springboard/target26
+   #load /vobs/projects/springboard/linux26
+   #load /vobs/projects/springboard/npfos
+   #load /vobs/projects/springboard/common_src
+   #load /vobs/projects/springboard/fabos
+   #load /vobs/projects/springboard/make
+   #load /vobs/projects/springboard/dist
+   #load /vobs/projects/springboard/prom
+   #load /vobs/projects/springboard/tps
+   #load /vobs/projects/springboard/sshtoolkit
+   #load /vobs/projects/buildtools
+   #load /vobs/projects/springboard/oss/bcm
+   #load /vobs/projects/springboard/oss_openssl
+   #load /vobs/projects/snmp_mibs
+   #load /vobs/multisite/webtools
+   #SRV_BLD_FREEZE_TIME = 22-Jul-2015.18:01:25
+   #SRV_BLD_FREEZE_TIME = 20-Apr-2016.18:09:45
+   #SRV_BLD_FREEZE_TIME = 8-Dec-2016.16:29:58
+   #SRV_BLD_FREEZE_TIME = 1-Jun-2017.11:26:24
+
+   "
+  master replica: sjc_admin@/vobs/admin
+  instance mastership: unshared
+  owner: swrel
+  group: sw-team
+  scope: global
+  constraint: one version per element
+  Hyperlinks:
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/fabos
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/spfos
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/prom
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/npfos
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/linux26
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/target26
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/tps
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/linux
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/oss
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/multisite/webtools
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/make
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/buildtools
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/fcr
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/boot
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/linux_plat
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/common_src
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/dist
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/springboard/toolchains
+    GlobalDefinition <- lbtype:V8.1.1_GA@/vobs/projects/snmp_mibs
+hq1-up-swe-02{103}:
+hq1-up-swe-02{109}: ct desc brtype:v8.1.1_cvr_brcd_643888@/vobs/admin
+branch type "v8.1.1_cvr_brcd_643888"
+  created 2017-07-06T03:47:56-07:00 by Software Release - Email (swrel.sw-team@hq1-up-swe-01)
+  "New branch type v8.1.1_cvr_brcd_643888"
+  master replica: sjc_admin@/vobs/admin
+  request for mastership: allowed for branch type
+  request for mastership: allowed for all instances
+  owner: swrel
+  group: sw-team
+  scope: global
+  constraint: one version per element
+  Attributes:
+    CI_NOTIFICATION = "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads@brocade.com,cwang@Brocade.COM,gvelmuru@Brocade.COM"
+    BranchKind = "Release"
+    ENFORCE_RCI = "TRUE"
+    ENFORCE_GK = "TRUE"
+    ENABLE_CI_TIME = "TRUE"
+    VOBGROUP = "springboard"
+    X86_64_BIT = "TRUE"
+    TEAMTRACK_RELEASE = "FOS8.1.1"
+    PRODUCT_CONTEXT = "springboard"
+  Hyperlinks:
+    GlobalDefinition <- brtype:v8.1.1_cvr_brcd_643888@/vobs/multisite/sreglobal
+    GlobalDefinition <- brtype:v8.1.1_cvr_brcd_643888@/vobs/projects/springboard/fabos
+hq1-up-swe-02{110}:
+
+
+/usr/rational/local/bin/uat_srtmkbranch -group dev -product fos -branch v8.1.1_cvr_brcd_652242  -banner "v8.1.1_cvr_brcd_652242 " -label V8.1.1_GA -gatekeeper -rci -release -notify "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads@brocade.com,cwang@Brocade.COM,gvelmuru@Brocade.COM" -ttrelease "FOS8.1.1"
+
+
+q1-up-swe-02{123}: ct pwv
+Working directory view: ** NONE **
+Set view: mainlatest
+hq1-up-swe-02{124}: /usr/rational/local/bin/uat_srtmkbranch -group dev -product fos -branch v8.1.1_cvr_brcd_652242 -banner "v8.1.1_cvr_brcd_652242" -label V8.1.1_GA -gatekeeper -rci -release -notify "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads@brocade.com,cwang@Brocade.COM,gvelmuru@Brocade.COM" -ttrelease "FOS8.1.1"
+=============================================================
+Since multiple users can invoke this script as user vobadm, it
+can be hard to track down the original creator of any branch.
+So please identify yourself with your UNIX login and password
+This method of tracking also avoids the requirement of involving
+multiple user accounts in branch creation process.
+
+You must be one of the following users:
+
+chaor
+, cpeng, dbabu
+, dsung, ekaliyap, gadev, gadev, ilao, lchundur, mhyams
+, mshivayo
+, nmattam, nvaccadmin, sakshaya, shivanis, srewww, tkoulech, umiriyal, umiriyal, ushastri, vbryant, vjen, vmynam
+, zSvc_devbuild
+=============================================================
+
+login: ekaliyap
+Password:
+Info: Attempting to CO parent dir /scm_env_metadata/products/dev/fos/branches
+Info:Creating dir element /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242
+Generating config_specs
+Converting config-specs to UTC...
+Info: Creating Global Branch type
+Info: Checking in meta-data:
+Info: Applying RCI attributes on mutex file
+Info: Regenerating cache
+
+Printing output from view_cache params
+srtvp2md_ci: checking out /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params
+Executing: /usr/atria/bin/cleartool co -c "-group dev -product fos -branch v8.1.1_cvr_brcd_652242 for ekaliyap" /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params
+Result is: Checked out "/view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params" from version "/main/3439".
+
+Executing: /usr/atria/bin/cleartool diff -pred -serial /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params
+
+Result is: ********************************
+<<< file 1: /scm_env_metadata/cache/ci_view_params@@/main/3439
+>>> file 2: /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params
+********************************
+-----[after 3294 inserted 3295]-----
+> v8.1.1_cvr_brcd_652242:_v8.1.1_cvr_brcd_652242:.../v8.1.1_cvr_brcd_652242/LATEST::2::springboard:snapshot
+
+srtvp2md_ci: checking in /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params
+srtvp2md_ci: checking out /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full
+Executing: /usr/atria/bin/cleartool co -c "-group dev -product fos -branch v8.1.1_cvr_brcd_652242 for ekaliyap" /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full
+Result is: Checked out "/view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full" from version "/main/3463".
+
+srtvp2md_ci: checking in /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full
+Executing: /usr/atria/bin/cleartool ci -c "-group dev -product fos -branch v8.1.1_cvr_brcd_652242 for ekaliyap" /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full
+Result is: No email will be sent;  exiting now.
+Checked in "/view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_full" version "/main/3464".
+
+srtvp2md_ci: checking out /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full
+Executing: /usr/atria/bin/cleartool co -c "-group dev -product fos -branch v8.1.1_cvr_brcd_652242 for ekaliyap" /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full
+Result is: Checked out "/view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full" from version "/main/3433".
+
+srtvp2md_ci: checking in /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full
+Executing: /usr/atria/bin/cleartool ci -c "-group dev -product fos -branch v8.1.1_cvr_brcd_652242 for ekaliyap" /view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full
+Result is: No email will be sent;  exiting now.
+Checked in "/view/sreadm_shared_vu/scm_env_metadata/cache/ci_view_params_bybranch_full" version "/main/3434".
+
+Info: Creating local types in classic IP VOBs for vobgroup:springboard
+Setting up build for CVR/CCE...
+Info:Run this command as swrel
+/departments/sre/Builds/Scripts/setup_build_wrapper -branch "v8.1.1_cvr_brcd_652242" -notify "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads,cwang@Brocade.COM,gvelmuru@Brocade.COM" -product "fos"
+hq1-up-swe-02{125}: /departments/sre/Builds/Scripts/setup_build_wrapper -branch "v8.1.1_cvr_brcd_652242" -notify "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads,cwang@Brocade.COM,gvelmuru@Brocade.COM" -product "fos"
+BSPEC DIR Calculated:/departments/sre/Builds/FOS/v8.1.x_maint
+cp /departments/sre/Builds/properties/bspec.rci.cvr.template /departments/sre/Builds/FOS/v8.1.x_maint/bspec.emake.rci.v8.1.1_cvr_brcd_652242
+Created file: /departments/sre/Builds/FOS/v8.1.x_maint/bspec.emake.rci.v8.1.1_cvr_brcd_652242
+Created file: /departments/sre/Builds/FOS/v8.1.x_maint/rspec.v8.1.1_cvr_brcd_652242
+ Checked out "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242" from version "/main/1".
+
+ Created directory element "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec".
+Checked out "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec" from version "/main/0".
+
+ Created element "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci" (type "text_file").
+Checked out "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci" from version "/main/0".
+
+ Created directory element "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec".
+Checked out "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec" from version "/main/0".
+
+ Created element "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec" (type "text_file").
+Checked out "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec" from version "/main/0".
+
+No email will be sent;  exiting now.
+Checked in "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec" version "/main/1".
+No email will be sent;  exiting now.
+Checked in "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec" version "/main/1".
+No email will be sent;  exiting now.
+Checked in "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci" version "/main/1".
+No email will be sent;  exiting now.
+Checked in "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec" version "/main/1".
+No email will be sent;  exiting now.
+Checked in "/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242" version "/main/2".
+
+hq1-up-swe-02{126}:
+hq1-up-swe-02{126}: ct desc brtype:v8.1.1_cvr_brcd_652242@/vobs/admin
+branch type "v8.1.1_cvr_brcd_652242"
+  created 2017-10-09T01:18:16-07:00 by Software Release - Email (swrel.sw-team@hq1-up-swe-02)
+  "New branch type v8.1.1_cvr_brcd_652242"
+  master replica: sjc_admin@/vobs/admin
+  request for mastership: allowed for branch type
+  request for mastership: allowed for all instances
+  owner: swrel
+  group: sw-team
+  scope: global
+  constraint: one version per element
+  Attributes:
+    CI_NOTIFICATION = "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads@brocade.com,cwang@Brocade.COM,gvelmuru@Brocade.COM"
+    BranchKind = "Release"
+    ENFORCE_RCI = "TRUE"
+    ENFORCE_GK = "TRUE"
+    ENABLE_CI_TIME = "TRUE"
+    VOBGROUP = "springboard"
+    X86_64_BIT = "TRUE"
+    TEAMTRACK_RELEASE = "FOS8.1.1"
+    PRODUCT_CONTEXT = "springboard"
+  Hyperlinks:
+    GlobalDefinition <- brtype:v8.1.1_cvr_brcd_652242@/vobs/multisite/sreglobal
+hq1-up-swe-02{127}:makeview -pat v8.1.1_cvr_brcd_652242 -sre_showcs
+hq1-up-swe-02{127}: makeview -pat v8.1.1_cvr_brcd_652242 -sre_showcs
+==================================================
+Please specify the index number associated with
+your project (between 1 and 1)
+Input 0 to abort
+==================================================
+ 0      Abort
+ 1  v8.1.1_cvr_brcd_652242               swrel_v8.1.1_cvr_brcd_652242_01
+1
+
+### Physical site: sjc
+### Profile  site: sjc
+### View tag:      swrel_v8.1.1_cvr_brcd_652242_01
+### View gpath:    /net/ccvw29/vws4/swrel_v8.1.1_cvr_brcd_652242_01.vws
+### Local time:    Mon Oct  9 01:23:20 PDT 2017
+### CC-time:       time 09-Oct-2017.01:23:20
+### ==============================================================
+### Expanded config_spec
+### --------------------------------------------------------------
+# Checked-out elements
+#
+element * CHECKEDOUT
+#
+# Always grab top-of-tree for documentation.
+#
+element /vobs/multisite/intgtest/... /main/LATEST
+element /vobs/projects/docs/... /main/LATEST
+element /vobs/multisite/shared_docs/... /main/LATEST
+element /vobs/multisite/sreglobal/... /main/LATEST
+element /scm_env_metadata/... /main/LATEST
+element /vobs/projects/springboard/build/... /main/LATEST
+element /vobs/projects/springboard/toolchains /main/{!created_since(21-Sep-2012.00:56:43UTC)}
+element /vobs/projects/springboard/toolchains/cn58xx-gcc4.1/... /main/{!created_since(11-Mar-2009.02:45:00UTC)}
+element /vobs/projects/springboard/toolchains/cn68xx-gcc4.3/... /main/{!created_since(21-Nov-2013.23:30:00UTC)}
+element /vobs/projects/springboard/toolchains/utils/scripts/cstyle /main/{!created_since(29-May-2009.23:42:09UTC)}
+element /vobs/projects/springboard/toolchains/zvm/... /main/{!created_since(21-Jun-2013.22:23:00UTC)}
+element /vobs/projects/springboard/toolchains/kmd/... /main/{!created_since(24-Mar-2013.01:33:25UTC)}
+#element /vobs/projects/springboard/toolchains/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+element /vobs/projects/springboard/target26/... /main/oss_fos_dev/123
+element /vobs/projects/buildtools/... BUILDTOOLS_REL_20061030
+element /vobs/projects/springboard/common_src/... /main/{!created_since(26-May-2016.10:06:04UTC)}
+element /vobs/projects/springboard/oss/... /main/80 -nocheckout
+element /vobs/projects/springboard/oss/shunit2/... /main/{!created_since(7-Jan-2011.04:00:08UTC)} -nocheckout
+# New Tool Chain
+element /vobs/projects/springboard/toolchains/ppc/gcc-3.4.6-glibc-2.3.6/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+element /vobs/projects/springboard/toolchains/ppc/gcc-3.4.6-glibc-2.3.6-without-glibc-times-patch/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+element /vobs/projects/springboard/toolchains/utils/... /main/{!created_since(24-Jan-2008.01:49:36UTC)}
+element /vobs/projects/springboard/toolchains/...  /main/{!created_since(07-Nov-2012.22:30:00UTC)}
+# Mercury OSS
+#element /vobs/projects/springboard/target26/... .../oss_mercury_dev/{!created_since(04-Dec-2013.21:55:00UTC)&&!version(.../oss_mercury_dev/0)}
+#Skybolt OSS
+element /vobs/projects/springboard/target26/... .../oss_skybolt_dev/oss_2634_v8.0.1_dev/oss_2634_fos_dev/{!created_since(18-May-2017.04:12:15UTC)}
+# U-Boot
+element /vobs/projects/springboard/prom/... .../mercury_prom_dev/{!created_since(14-Aug-2014.01:09:58UTC)&&!version(.../mercury_prom_dev/0)}
+# HV begin
+element /vobs/projects/springboard/tps_hvfreescale/... /main/{!created_since(29-Apr-2013.16:14:10UTC)}
+# HV end
+
+element * .../v8.1.1_cvr_brcd_652242/LATEST
+mkbranch v8.1.1_cvr_brcd_652242
+element * V8.1.1_GA
+element * /main/0
+end mkbranch v8.1.1_cvr_brcd_652242
+
+element /vobs/projects/springboard/tps/broadcom/... /main/{!created_since(11-Jan-2014.01:00:00UTC)}
+# Following rules are for snapshot view..
+# They do not affect dynamic views
+#load /vobs/projects/springboard/build
+#load /vobs/projects/springboard/target26
+#load /vobs/projects/springboard/linux26
+#load /vobs/projects/springboard/npfos
+#load /vobs/projects/springboard/common_src
+#load /vobs/projects/springboard/fabos
+#load /vobs/projects/springboard/make
+#load /vobs/projects/springboard/dist
+#load /vobs/projects/springboard/prom
+#load /vobs/projects/springboard/tps
+#load /vobs/projects/springboard/sshtoolkit
+#load /vobs/projects/buildtools
+#load /vobs/projects/springboard/oss/bcm
+#load /vobs/projects/springboard/oss_openssl
+#load /vobs/projects/snmp_mibs
+#load /vobs/multisite/webtools
+#SRV_BLD_FREEZE_TIME = 22-Jul-2015.18:01:25
+#SRV_BLD_FREEZE_TIME = 20-Apr-2016.18:09:45
+#SRV_BLD_FREEZE_TIME = 8-Dec-2016.16:29:58
+#SRV_BLD_FREEZE_TIME = 1-Jun-2017.11:26:24
+### --------------------------------------------------------------
+### Exiting makeview because of -sre_showcs or -showcs
+### ==============================================================
+hq1-up-swe-02{128}:
+hq1-up-swe-02{128}:
+hq1-up-swe-02{129}: cd /buildsjc/sre/Nightly/fos/v8.1.1
+hq1-up-swe-02{130}: ls -lrt
+total 1206304
+drwxr-xr-x 4 swrel rel-con1      8192 Jun  1 13:58 v8.1.x_maint_170601_1127_v8.1.1/
+-rw-r--r-- 1 swrel rel-con1       226 Jun 28 17:04 info.failed_nightly_builds
+-rw-r--r-- 1 swrel rel-con1 307594140 Aug  9 14:47 history.current.bak
+-rw-r--r-- 1 swrel rel-con1       142 Aug  9 14:50 info.last_nightly_build.prev
+-rw-r--r-- 1 swrel rel-con1      3822 Aug 10 08:48 last_rci_timestamp
+-rw-r--r-- 1 swrel rel-con1 307565292 Aug 10 10:00 history.current
+-rw-r--r-- 1 swrel rel-con1 307565292 Aug 10 10:01 history.reference
+-rw-r--r-- 1 swrel rel-con1 307565292 Aug 10 10:01 history.current.last_build
+-rwxr-x--- 1 swrel rel-con1      4379 Aug 10 10:04 emake_perf_data.csv*
+-rw-r--r-- 1 swrel rel-con1      1704 Aug 10 10:04 info.recent_nightly_builds
+lrwxrwxrwx 1 swrel rel-con1        27 Aug 10 10:04 LATEST_BUILD -> ./v8.1.1x_patch_170810_0848
+-rw-r--r-- 1 swrel rel-con1       142 Aug 10 10:04 info.last_nightly_build
+-rw-r--r-- 1 swrel rel-con1       554 Aug 10 10:04 BuildCreation_08_10_2017_100412.log
+-rwxr-x--- 1 swrel rel-con1     19890 Aug 10 10:19 aggregate_checkins.html*
+lrwxrwxrwx 1 swrel sw-team         52 Aug 10 10:38 LATEST_BOM -> ./v8.1.1x_patch_170810_0848/CC_Versions_and_OIDs.bom
+lrwxrwxrwx 1 swrel sw-team         39 Aug 10 10:38 LATEST_VOBLIST -> ./v8.1.1x_patch_170810_0848/CC_vob_list
+drwxr-xr-x 4 swrel rel-con1      8192 Aug 10 10:39 v8.1.1x_patch_170810_0848_v8.1.1a/
+-rw-r--r-- 1 swrel sw-team         78 Aug 18 14:31 info.next_release_build
+-rw-r--r-- 1 swrel rel-con1       164 Aug 18 14:31 info.last_release_build
+drwxr-xr-x 3 swrel rel-con1      4096 Sep  5 15:30 v8.1.1a_cce_brcd_622430/
+drwxr-xr-x 3 swrel rel-con1      4096 Sep 22 15:34 v8.1.1a_cvr_brcd_652145/
+hq1-up-swe-02{131}: mkdir v8.1.1_cvr_brcd_652242
+hq1-up-swe-02{132}: cd v8.1.1_cvr_brcd_652242
+hq1-up-swe-02{133}: pwd
+/buildsjc/sre/Nightly/fos/v8.1.1/v8.1.1_cvr_brcd_652242
+hq1-up-swe-02{134}:
+hq1-up-swe-02{133}: pwd
+/buildsjc/sre/Nightly/fos/v8.1.1/v8.1.1_cvr_brcd_652242
+hq1-up-swe-02{134}: cd ..
+hq1-up-swe-02{135}: cp history.current info.last_release_build info.next_release_build /buildsjc/sre/Nightly/fos/v8.1.1/v8.1.1_cvr_brcd_652242
+hq1-up-swe-02{136}:
+
+hq1-up-swe-02{139}: ls
+history.current  info.last_release_build  info.next_release_build
+hq1-up-swe-02{140}: cat info.last_release_build
+TARGET_DIR:/buildsjc/sre/SQA/fos/v8.1.1/v8.1.1a
+BUILD_VIEW:swrel_v8.1.1a_ga
+PREVIOUS_BUILD_LABEL:V8.1.1A_GA
+LOG_DIR:/buildsjc/sre/SQA/fos/v8.1.1/Build_Logs/v8.1.1a
+hq1-up-swe-02{141}: cat info.next_release_build
+NEXT_RELEASE:v8.1.1b_rc1_bld01
+SRE_GENERIC_VERSION:v8.1.1
+#CLONE_SUFFIX:clone
+hq1-up-swe-02{142}:
+
+
+hq1-up-swe-01{193}: cat info.last_release_build
+TARGET_DIR:/buildsjc/sre/SQA/fos/v8.1.1/v8.1.1
+BUILD_VIEW:swrel_v8.1.1_ga
+PREVIOUS_BUILD_LABEL:V8.1.1_GA
+LOG_DIR:/buildsjc/sre/SQA/fos/v8.1.1/Build_Logs/v8.1.1
+
+hq1-up-swe-01{194}: cat info.next_release_build
+NEXT_RELEASE:v8.1.1_cvr_brcd_652242_01
+SRE_GENERIC_VERSION:v8.1.1
+#CLONE_SUFFIX:clone
+
+
+
+hq1-up-swe-02{151}: ls -lrt /buildsjc/sre/SQA/fos/v8.1.1/Build_Logs/v8.1.1
+total 153840
+-rwxr-x--- 1 swrel rel-con2   5847653 Jun  1 12:58 CC_Versions_and_OIDs.bom*
+-rwxr-x--- 1 swrel rel-con2       818 Jun  5 20:24 defect_list.v8.1.1.html*
+-rwxr-x--- 1 swrel rel-con2      5700 Jun  5 20:25 mail.txt*
+-rwxr-x--- 1 swrel rel-con2        50 Jun  5 20:33 build_content_report.txt*
+-rwxr-x--- 1 swrel rel-con2 151040804 Jun  5 23:32 v8.1.1.llog*
+hq1-up-swe-02{152}: ls -lrt /buildsjc/sre/SQA/fos/v8.1.1/v8.1.1
+total 3380
+-r-xr-x--- 1 swrel rel-con2     187 Feb 12  2007 app_names*
+-r-xr-x--- 1 swrel rel-con2     272 May 15  2007 pubkey.pem*
+-r-xr-x--- 1 swrel rel-con2     451 Apr 19  2013 pubkey2k.pem*
+-r-xr-x--- 1 swrel rel-con2    6994 Oct  3  2016 install_v
+
+hq1-up-swe-02{153}: ct lsview |grep swrel_v8.1.1_ga
+* swrel_v8.1.1_ga      /net/hq1-up-vwsarch-01/vws5/swrel/swrel_v8.1.x_maint_170601_1127.vws
+hq1-up-swe-02{154}:
+
+/corp/global/tools/bin/srt_add_branch_to_acl.pl -branch v8.1.1_cvr_brcd_652242 -managers dsung,cwang,gvelmuru,dramesh
+
+
+hq1-up-swe-02{159}: /corp/global/tools/bin/srt_add_branch_to_acl.pl -branch v8.1.1_cvr_brcd_652242 -managers dsung,cwang,gvelmuru,dramesh
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fi07400x': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08010x_patch': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08030x_patch': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fos_8.0.0_kasan_dev': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/mkg_demo_sre': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_fusion_dev': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_fusion_dev_fvt_dev': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/siv4000_patch': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/v7.4.0_amp_patch': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/v8.0.0_pit_a': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_isns_proto_dev': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/ni05600gj': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08030k_cvr': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/slxosr_pavo_main_dev': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08050x_patch': Operation not permitted
+chown: changing ownership of `/corp/global/datasjc/sre/manage_acl/branch_data/slxos17s.1.0x_maint': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fi07400x': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08010x_patch': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08030x_patch': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fos_8.0.0_kasan_dev': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/mkg_demo_sre': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_fusion_dev': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_fusion_dev_fvt_dev': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/siv4000_patch': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/v7.4.0_amp_patch': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/v8.0.0_pit_a': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/nos_isns_proto_dev': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/ni05600gj': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08030k_cvr': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/slxosr_pavo_main_dev': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/fi08050x_patch': Operation not permitted
+chmod: changing permissions of `/corp/global/datasjc/sre/manage_acl/branch_data/slxos17s.1.0x_maint': Operation not permitted
+hq1-up-swe-02{160}:
+
+
+FOS v8.1.1_cvr_brcd_652242:v8.1.1_cvr_brcd_652242:swrel,gvelmuru,dramesh,cwang:hq1-up-ecbld-005:/buildsjc/sre/Nightly/fos/v8.1.1/v8.1.1_cvr_brcd_652242:/departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci:
+
+
+
+FOS v8.1.1_cvr_brcd_652242:v8.1.1_cvr_brcd_652242 Branch:v8.1.1_cvr_brcd_652242:swrel:hq1-up-ecbld-005:/buildsjc/sre/Nightly/fos/v8.1.1:/departments/sre/transients/fos/v8.1.1:/departments/sre/Builds/Scripts/promote_fos_to_sqa.ksh -r /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec
+
+
+hq1-up-swe-02{161}: cd /departments/sre
+hq1-up-swe-02{162}: vi bld_authmap.hq1-up-sreportal-1
+hq1-up-swe-02{163}: vi promote_authmap.hq1-up-sreportal-1
+hq1-up-swe-02{164}: ls -lrt /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci
+-r--r--r-- 1 vobadm sw-team 4615 Oct  9 01:19 /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci
+hq1-up-swe-02{165}: ls -lrt /buildsjc/sre/Nightly/fos/v8.1.1/v8.1.1_cvr_brcd_652242
+total 301556
+-rw-r--r-- 1 swrel sw-team 307565292 Oct  9 01:25 history.current
+-rw-r--r-- 1 swrel sw-team       160 Oct  9 01:30 info.last_release_build
+-rw-r--r-- 1 swrel sw-team        86 Oct  9 01:30 info.next_release_build
+hq1-up-swe-02{166}: ls -lrt /departments/sre/Builds/Scripts/build_harness
+-rwxr-x--- 1 swrel sw-team 38197 Mar 20  2017 /departments/sre/Builds/Scripts/build_harness*
+hq1-up-swe-02{167}:
+hq1-up-swe-02{168}: ls -lrt /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec
+-r--r--r-- 1 vobadm sw-team 3394 Oct  9 01:19 /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/rspec/rspec
+hq1-up-swe-02{169}: ls -lrt /departments/sre/Builds/Scripts/promote_fos_to_sqa.ksh -r
+-rwx------ 1 swrel sw-team 51546 Oct  3 11:38 /departments/sre/Builds/Scripts/promote_fos_to_sqa.ksh*
+hq1-up-swe-02{170}: ls -lrt /departments/sre/transients/fos/v8.1.1
+total 0
+-rw-r--r-- 1 swrel sw-team 0 Sep 22 01:26 .pkg_completed_v8.1.1a_cvr_brcd_652145_01_170921_2322
+hq1-up-swe-02{171}: ls -lrt /buildsjc/sre/Nightly/fos/v8.1.1
+total 1206308
+drwxr-xr-x 4 swrel rel-con1      8192 Jun  1 13:58 v8.1.x_maint_170601_1127_v8.1.1/
+-rw-r--r-- 1 swrel rel-con1       226 Jun 28 17:04 info.failed_nightly_builds
+-rw-r--r-- 1 swrel rel-con1 307594140 Aug  9 14:47 history.current.bak
+-rw-r--r-- 1 swrel rel-con1       142 Aug  9 14:50 info.last_nightly_build.prev
+-rw-r--r-- 1 swrel rel-con1      3822 Aug 10 08:48 last_rci_timestamp
+hq1-up-swe-02{173}: cd /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci:
+/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec/bspec.emake.rci:: No such file or directory.
+hq1-up-swe-02{174}: cd /scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec
+hq1-up-swe-02{175}: clear
+hq1-up-swe-02{176}: pwd
+/scm_env_metadata/products/dev/fos/branches/v8.1.1_cvr_brcd_652242/bspec
+hq1-up-swe-02{177}: ls
+bspec.emake.rci
+hq1-up-swe-02{178}: cat bspec.emake.rci
+#------------------------------------------------------------------------------
+# BUILD SPECIFICATION FILE
+#------------------------------------------------------------------------------
+# Product specification
+
+SRV_PRODUCT="FOS"
+SRV_REL_VERSION="8.1.1"
+SRV_REL_REMEDY="FOS8.1.1"
+SRV_BUILD_TYPE="Nightly"
+SRV_BUILD_BRANCH="v8.1.1_cvr_brcd_652242"
+SRV_STORAGE="/buildsjc/sre"
+#Change fos to $prod going forward...
+SRV_TARGET_DIR="${SRV_STORAGE}/Nightly/fos/v8.1.1/${SRV_BUILD_BRANCH}/${timestamp}"
+SRV_LAST_RELEASE_BUILD_INFO="${SRV_STORAGE}/Nightly/fos/v8.1.1/${SRV_BUILD_BRANCH}/info.last_release_build"
+SRV_NEXT_RELEASE_BUILD_INFO="${SRV_STORAGE}/Nightly/fos/v8.1.1/${SRV_BUILD_BRANCH}/info.next_release_build"
+SRV_BUILD_NUMERIC_ID=`cat "${SRV_NEXT_RELEASE_BUILD_INFO}" | egrep "^NEXT_RELEASE" | sed -e 's/.*_//g'`
+SRV_BUILD_NAME="${SRV_BUILD_BRANCH}_${SRV_BUILD_NUMERIC_ID}_${timestamp}"
+SRV_TIMESTAMP=CURRENT
+SRV_CSPEC_FILE="/view/sreadm_makeview_vu/scm_env_metadata/products/dev/fos/branches/${SRV_BUILD_BRANCH}/view_config_spec.txt"
+SRV_MAKE_PROGRAM="emake"
+
+#------------------------------------------------------------------------------
+# Information on this build
+
+#SRV_BUILD_VIEW="${SRV_BUILD_MEISTER}_${SRV_BUILD_NAME}_${timestamp}"
+SRV_BUILD_VIEW="${SRV_BUILD_MEISTER}_${SRV_BUILD_NAME}"
+SRV_VER_TYPE=`/departments/sre/Builds/Scripts/srt_map_bldname.pl ${SRV_BUILD_NAME}`
+
+SRV_FAIL_EMAIL="sw-rel-eng"   # for failed build email
+SRV_STATUS_EMAIL="dramesh.com,DL-GRP-GRP-HCL-Sustaining-Leads,cwang.COM,gvelmuru.COM,sw-rel-eng" # for build status report email
+SRV_PRIVATE_BUILD=0         # if 1, build ID will have user ID branding
+SRV_PUBLISH_BUILD=1         # if 1, publish the build to Remedy Product Catalog
+SRV_VIEW_SERVER=`hostname`  #
+SRV_VIEW_STORAGE=vws1       # SAN storage is /vws1
+
+#------------------------------------------------------------------------------
+# Following are special cases.. Comment them out unless
+# you are sure exactly what are they meant for..
+#------------------------------------------------------------------------------
+##
+## Skip a build if no changes are reported by RCI time-stamp
+## attribute corresponding to this branch and no changes have
+## been posted to default cspecs since the previous build..
+##
+SRV_SKIP_UNNECESSARY_BUILDS=1
+##
+## All FOS builds require repackaging in order to promote
+## nightly builds to SQA. All active release branches store
+## the intelligence regarding the last SQA drop and the
+## upcoming SQA drop in ${SRV_TARGET_DIR}/info.last_release_build
+## and ${SRV_TARGET_DIR}/info.next_release_build files
+## The packags are stored under /departments/sre/transients
+## This helps reduce the turnaround times for packaging requests..
+##
+: ${SRV_TARGET_DIR:=$SRV_STORAGE/$SRV_BUILD_TYPE/$SRV_BUILD_BRANCH}
+SRV_PACKAGE_POST_OPS="/departments/sre/Builds/Scripts/fos_package.pl"
+##
+## Any additional operations to be performed after a successful build.
+## We are using this hook to rcp the tar ball over to BLR as a
+## background process. A lazy errr.. an engineer persuing a more
+## automated workflow can use this to:
+## - start an FVT test on his/her private successful build
+## - or to trigger an additinal script to verify contents of all RPMs
+## - or to run a source code profiling script that can post
+##   its results to a web-page for the team to see.
+##
+#SRV_PRIVATE_POST_OPS="/departments/sre/Builds/Scripts/fos_rcp_to_blr_wrapper.pl"
+#SRV_PRIVATE_POST_OPS="/bin/nohup /users/home/swrel/Builds/Scripts/push_to_blr.pl -p ${SRV_TARGET_DIR} -r vayu:${SRV_TARGET_DIR} 2>&1 &"
+##
+## This flag is path to a definition file which has additional
+## values required for special flavors of build. Such flags are
+## mandatory for applications such as ccache or to specify an alternate
+## toolchain location. Engineers can use this as a mechanism to
+## pass on additional make flags to their private builds..
+##
+#SRV_MAKE_ARGS="/departments/sre/Builds/FOS/v5.2.0x_patch/make_args"
+##
+## FOS builds can run under snapshot views.. Uncomment this flag
+## to use snapshot views..
+##
+#SRV_VIEW_TYPE=SNAPSHOT
+##
+## Engineers can use this flag to perform a complete build in their
+## private views.. The view server and view storgae values defined
+## earlier become irrlevant with this flag..
+##
+#SRV_BUILD_VIEW="my_build_view"
+##
+## Engineers can use this flag to perform any pre-build activities
+## using this flag.. Possibilities include,
+## - an automated rebase and checkins
+## - cleaning up all .o's from the previous build
+## - to reset a private test bed in anticiapation of upcoming build etc..
+#SRV_PRIVATE_PRE_OPS=path_to_a_cscript
+hq1-up-swe-02{179}:
+
+SRV_STATUS_EMAIL="dramesh.com,DL-GRP-GRP-HCL-Sustaining-Leads,cwang.COM,gvelmuru.COM,sw-rel-eng" # for build status report email
+
+hq1-up-swe-02{180}: ct co bspec.emake.rci
+Checked out "bspec.emake.rci" from version "/main/1".
+hq1-up-swe-02{181}: vi bspec.emake.rci
+hq1-up-swe-02{182}: ct ci -nc bspec.emake.rci
+No email will be sent;  exiting now.
+Checked in "bspec.emake.rci" version "/main/2".
+hq1-up-swe-02{183}:
+
+
+
+hq1-up-swe-02{184}: cd /vobs/multisite/sreglobal/bin
+hq1-up-swe-02{185}: ct co swrel_nightly_view_manifest
+Checked out "swrel_nightly_view_manifest" from version "/main/1488".
+hq1-up-swe-02{186}: vi swrel_nightly_view_manifest
+hq1-up-swe-02{187}: ct ci -c "branch added swrel_v8.1.1_cvr_brcd_652242 nightly_view_mainfest" swrel_nightly_view_manifest
+Checked in "swrel_nightly_view_manifest" version "/main/1489".
+hq1-up-swe-02{188}:
+hq1-up-swe-02{189}: ct desc brtype:v8.1.1_cvr_brcd_652242@/vobs/admin
+branch type "v8.1.1_cvr_brcd_652242"
+  created 2017-10-09T01:18:16-07:00 by Software Release - Email (swrel.sw-team@hq1-up-swe-02)
+  "New branch type v8.1.1_cvr_brcd_652242"
+  master replica: sjc_admin@/vobs/admin
+  request for mastership: allowed for branch type
+  request for mastership: allowed for all instances
+  owner: swrel
+  group: sw-team
+  scope: global
+  constraint: one version per element
+  Attributes:
+    CI_NOTIFICATION = "dramesh@Brocade.com,DL-GRP-GRP-HCL-Sustaining-Leads@brocade.com,cwang@Brocade.COM,gvelmuru@Brocade.COM"
+    BranchKind = "Release"
+    ENFORCE_RCI = "TRUE"
+    ENFORCE_GK = "TRUE"
+    ENABLE_CI_TIME = "TRUE"
+    VOBGROUP = "springboard"
+    X86_64_BIT = "TRUE"
+    TEAMTRACK_RELEASE = "FOS8.1.1"
+    PRODUCT_CONTEXT = "springboard"
+  Hyperlinks:
+    GlobalDefinition <- brtype:v8.1.1_cvr_brcd_652242@/vobs/multisite/sreglobal
+hq1-up-swe-02{190}:
+
+ACL: https://swcs-03.brocade.com/cgi-bin/sre/reporter/manage_acl.cgi?filter=v8.1.1_cvr_brcd_652242
+https://swcs-03/cgi-bin/sre/reporter/select_build.cgi
+
+

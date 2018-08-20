@@ -1,0 +1,911 @@
+bash-4.1$ PATH=/usr/atria/bin:/corp/global/tools/bin:/usr/rational/local/bin:$PATH
+net user <userName> /domain
+net user cgudivad /domain
+Rasi$1234 hcl
+Rasu$1234 brocade
+?	Okta SSO Username: ek023149
+?	Initial Temporary Password: 2T*eW2422 --ekaliyap_17
+?	Email Address:  elavarasan.kaliyaperumal@broadcom.com
+?1.	Access: https://broadcom.okta.com via your PC or Mac.
+
+http://ccmaabld6/homepage.html
+
+
+
+
+
+
+cleartool lsview|findstr nvivekan >> c:\NIWIN.txt
+sudo /corp/global/tools/bin/remove_departed_employees_views.pl -views_list /users/home101/ekaliyap/departed_vws -remove
+ du -sk /net/ccvw1/vws1/skbalasu_slxos17s.1.01_pit_a_02.vws
+ du -sh /net/ccvw1/vws1/skbalasu_slxos17s.1.01_pit_a_02.vws
+ df -kh .
+  
+http://paleogod.blogspot.in/2016/03/blog-post.html
+Any vdi request remedt send it to--DL-GRP-SRE India <DL-GRP-SREIndia@Brocade.com>; DL-GRP-IT-GITIO-BLR-Windows <DL-GRP-IT-GITIO-BLR-Windows@Brocade.com>
+bldadm-F0rgeCM!P
+
+1.FOS and NOS Sqa Drop or Packages 
+
+2 .CCE CVR .. pl check bspec and Rspec and Patch ID of Rspec
+
+3 .Dev Branc no need of relese
+
+4.\\buildsjc\sre\CVR\ironware\netironxmr-mlx\06000\06000cvr\06000C006.zip
+
+5./usr/rational/local/bin/makeview
+6. Latest martini branch is 8050
+
+7.How do I add gatekeeper to a directory?How do I add gatekeeper to a directory? 
+http://activekb-vm.brocade.com/?q=425
+
+ENFORCE_GK = "TRUE"
+hq1-up-ecbld-904{115}: pwd
+/vobs/multisite/sreglobal/gk_authlists
+hq1-up-ecbld-904{114}: ct diff -ser -pre common
+********************************
+<<< file 1: /vobs/multisite/sreglobal/gk_authlists/common@@/main/188
+>>> file 2: common
+********************************
+-----[after 273 inserted 274]-----
+> /vobs/projects/springboard/fos_linux/linux_3_12_37:ansundar,gmuruges,kthaker,mmandala,kramasa
+hq1-up-ecbld-904{115}:
+
+8. Checkin issue while creating dir or files..mkelem
+
+Rajasekhar, The mkelem failure is a clearcase behavior due to the triggers set. As you expect a checkin to happen urgently,
+ please follow the below steps to do a checkin:
+
+1st commnd : find /vobs/vendorsrc/ -size 0 -mtime -1|grep -v "lost+found" > list 
+2nd commnd: bash 
+3rd commnad: for i in `cat list `; do ct co $i; cp $.mkelem $i; done  
+
+Let me know if you further need any info.
+
+
+9.
+http://activekb-vm.brocade.com/?q=860
+How do I cleanup my personal storage used for ClearCase views?
+$ ls -1 /zzz/work0*/joe/dyn_view_rstg
+You can obtain the usage information for your personal storage at any time by running the following command from any Linux ClearCase client.
+
+$ /corp/global/tools/bin/srt_my_storage_info.pl
+
+10
+How do I relocate my existing view to a view server with more space?
+http://activekb-vm.brocade.com/?q=905
+
+11
+
+Martini Latest build location
+
+/buildsjc/sre_ip/Nightly/fi/fi8050/
+
+12
+
+ ct lstype -kind lbtype -invob /vobs/mucho
+ ct lstype -kind brtype -invob /vobs/mucho
+ ct lstype -kind brtype -invob /vobs/mucho | grep fi08050
+
+
+13
+
+Checked out version, but could not copy data to "M:\vob\dir\file.doc" in view: permission denied.  Correct the condition, then uncheckout and re-checkout the element
+
+If the issue is related to permissions on the directory element, run the cleartool protect command to add the correct privileges.
+
+Example: cleartool protect -chmod 777 <directory where file element resides>
+If the issue is related to the view storage area, try correcting the protections on the view storage directory using operating system commands and functionality. It may also be necessary to use fix_prot to correct the protections on the view as detailed in technote 1142606. 
+
+Example:
+%> fix_prot -r -chown <user name> -chgrp <primary group> -chmod 775 <Path to View storage>
+
+%> fix_prot -root -chown <user name> -chgrp <primary group> <Path to View storage>
+==
+clearfsimport -preview -rec  c:\sourceDir\* m:\MyView\MyVob\MyDestinationDirectory
+
+clearfsimport –preview  –recurse /usr/src/projectx /vobs/projectx/src
+
+
+clearfsimport  -rec  -preview source-name  target-VOB-directory
+
+this is the examples
+
+
+finally run without -preview
+==
+
+
+14 BNA build path
+ /buildsjc/sre_bna/Nightly/networkadvisor/networkadvisor14.2.0/networkadvisor14.2.0_beta_bld103
+
+15.
+drwxr-xr-x permission number 755
+dr-xr-x--- chmod -R 550  08030
+drwxrwxr-x 
+
+drwxr-xr-x 
+drwxr-x---   -> 750 -rwxr-x--
+
+chmod 755 
+
+http://ss64.com/bash/chmod.html
+
+16)
+/usr/atria/bin/cleartool lstype -kind brtype -invob /vobs/mucho  -short |grep fi08050
+
+17)
+\\buildsjc\sre\CCE\ironware\bigironrx\02600\02600ga\02600ga.zip
+
+18)
+For undoing branch ACL for ni05600k
+Step 1
+cd /corp/global/datasjc/sre/manage_acl/branch_data
+rm ni05600k
+
+Step 2
+in the file,  /corp/global/datasjc/sre/manage_acl/metadata/authlist
+remove the ni05600k entry
+
+Step 3, execute
+/corp/global/tools/bin/sync_acl.pl
+
+19)
+http://ss64.com/bash/chmod.html for permission
+
+20) ct lstype -kind trtype -invob /scm_sqa_amp | grep trigger
+
+21)
+ cd /vobs/multisite/sreglobal/sync/mship_transfer_branches
+
+22)
+If the branch instances already created for this file ..then co will not be a problem. In this case branch it is not created for this file. so trying to create a branch and its fail due to mastership
+(cleartool: Error: Unable to perform operation "make branch" in replica "bri_platform" of VOB "/vobs/platform".
+cleartool: Error: Master replica of branch type "fi_mojito_dev" is "sjc_platform".
+cleartool: Error: Unable to check out "sil_utils.c".
+rsivasam@bri-up-swe-04{7}[rsivasam_fi_mojito_dev_01]:)
+
+23)
+
+. For clearcase install: copy install.bat file from \\corp\global\tools\sre\ccinstall\windows\clearcase_v7.1.2\site_maa to your local desktop. 
+Right click on it "Run As Administrator", this will do the install
+Thanks,
+Narasimha
+
+24)
+ct setview < fi_ipsec_pki_v6_dev branch view>
+/vobs/fdry/Common
+ct rmname common
+ttrci –task /vobs/fdry/Common
+
+25)
+
+How do I add gatekeeper to a directory?
+
+
+Verify if there is gatekeeper enforced to the branch by executing the command, ct desc brtype:<branch>@<vob>.  If ENFORCE_GK = "TRUE", proceed with the following steps.  
+
+
+1.    Set a view (You could use any view, including v6.4.0_pit view).
+    ct setview <viewtag>
+
+2.    Go to the gatekeeper authorized lists directory. 
+     cd /vobs/multisite/sreglobal/gk_authlists
+
+3.    Check out gatekeeper authorized lists directory (gk_authlists.)
+    ct co gk_authlists
+
+4.    Create a file to put the information of the directory and  gatekeeper name (in this case, main is the file name).
+    ct mkelem main 
+
+5.    Check out the file to add information of directory and gatekeeper name.
+    ct co main
+
+6.    Edit the file to add information of directory and gatekeeper name.
+    vi main 
+              /vobs/multisite/intgtest/lib:jdoe
+
+7.    Check in the file after information is added
+    ct ci main
+
+Check in the parent directory
+    cd .. 
+    ct ci gk_authlists
+
+==
+
+
+/vobs/projects/springboard/fabos/src/yang/
+
+Terry Liang,
+Leifang Hu,
+Mayank Maheshwari,
+
+
+==
+
+26)
+Below is the command you can use to list the check-ins for a branch:
+CMD: /usr/rational/local/bin/diffreport -vobgrp springboard -branch oss_vnos_dev -ot 25-Nov-2016.00:01 -nt 13-Dec-2016.00:01
+
+Note: vobgroup and branch inputs must be provided as per the requirement.
+
+You can refer to FAQ: http://activekb-vm.brocade.com/?q=702 for more details on its usage. Let me know if you still need any info.
+
+Thanks,
+Narasimha
+
+
+27)
+Engineering ClearCase users have been each allocated 100-200 GB of personal storage space. This space is intended to be used with ClearCase related functions only. 
+
+The usage of this storage is controlled via SRE's "makeview" utility. 
+So do not tamper with this storage space directly. Removing contents in this directory may lead to loss of any work in progress.
+
+If you have run out of space, please free it up as follows.
+
+List which views are consuming this storage. The following example is for user "joe". Please substitute your login for "joe".
+ 
+$ ls -1 /zzz/work0*/joe/dyn_view_rstg
+joe_nos4.1.0_pit_a_03.stg
+joe_nos4.1.0_pit_a_04.stg
+joe_nos4.1.0_pit_a_05.stg
+
+Once these views are identified, please "cleartool setview" to each of the highlighted views and run "make distclean" in them to free up space used up by built objects.
+
+You can obtain the usage information for your personal storage at any time by running the following command from any Linux ClearCase client.
+
+$ /corp/global/tools/bin/srt_my_storage_info.pl
+
+28)
+Please use the install.bat file under \\corp\global\tools\sre\ccinstall\windows\clearcase_v7.1.2\site_maa 
+copy it to your local desktop and right click on it, Run as administrator
+
+29)
+hq1-up-ecbld-904{109}: pwd
+/scm_env_metadata/products/dev/fikx/defaults/Manifest
+hq1-up-ecbld-904{108}: ls -lrt
+total 77
+-r--r--r-- 1 vobadm sw-team 10670 Mar 26  2015 Manifest_08010.mapping
+-r--r--r-- 1 vobadm sw-team 12831 Mar 26  2015 Manifest_08020.mapping
+-r--r--r-- 1 vobadm sw-team 12111 Apr  2  2015 Manifest_08030.mapping
+-r--r--r-- 1 vobadm sw-team   635 Apr  2  2015 README
+-r--r--r-- 1 vobadm sw-team  9009 Dec 14  2015 Manifest_08040.mapping
+-r--r--r-- 1 vobadm sw-team  9311 May 10  2016 Manifest_08041.mapping
+-r--r--r-- 1 vobadm sw-team  9167 Oct  4 06:33 Manifest_08050.mapping
+-r--r--r-- 1 vobadm sw-team 12362 Nov 16 06:15 Manifest_08060.mapping
+
+hq1-up-ecbld-904{106}: cat Manifest_08060.mapping |grep swrel_fi_tanto_dev_boot_10109b010_161115_0905
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010.bin:ICX7150/Boot
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010.sig:ICX7150/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010nss.sig:ICX7150/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.bin:ICX7250/Boot
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.sig:ICX7250/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010nss.sig:ICX7250/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.bin:ICX7450/Boot
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.sig:ICX7450/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010nss.sig:ICX7450/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010.bin:ICX7750/Boot
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010.sig:ICX7750/Signatures
+#/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010nss.sig:ICX7750/Signatures
+hq1-up-ecbld-904{107}:
+
+30)
+/usr/rational/local/bin/makeview
+
+
+31)
+Cd /vobs/multisite/sreglobal/sync/mship_transfer_branches
+VOBLIST:/scm_dev_fi_linux,/scm_dev_fi_oss_target,/scm_dev_fi_oss,/scm_dev_fi_tps,/vobs/fdry,/vobs/fdry2,/vobs/mucho,/vobs/multisite/sreglobal,/vobs/platform,/vobs/projects/springboard/linux_plat,/vobs/projects/springboard/tps_hvfreescale,/vobs/vendorsrc
+
+
+
+
+
+32) albd satrup
+Click start -> Run -> then type cc.cpl
+
+* After clicking on 'ok' button 'ClearCase Properties' 
+window will appear if Clearcase is already installed in 
+your m/c. 
+
+* Select 'service Startup' tab -> click on 'Start ClearCase
+
+33)
+ct lsh -minor brtype:fi_tanto_dev@/vobs/mucho
+[swrel@bri-up-swe-04 ~]$ clear
+[swrel@bri-up-swe-04 ~]$ ct lsh -minor brtype:fi_tanto_dev@/vobs/mucho
+--12-29T12:04  vobadm     change master to "bri_mucho" of branch type "fi_tanto_dev"
+  "Changed master replica from "sjc_mucho" to "bri_mucho"."
+34)
+
+Bri co/ci issue pl login to bri-up-swe-04 
+
+/departments/sre/rci_logs/rci6.0/rpulluru for example
+
+35)
+To find out the zero verion files in a branch, execute the following.
+
+ct setview (the view you're working on)
+
+ct find . –version “version(…/BRANCH-NAME/LATEST)&&version(…/BRANCH-NAME/0)” –print
+
+or
+
+ct find –all –version “version(…/BRANCH-NAME/LATEST)&&version(…/BRANCH-NAME/0)” –print
+ or
+ct find –avobs –version “version(…/BRANCH-NAME/LATEST)&&version(…/BRANCH-NAME/0)” –print
+
+36)
+cleartool find . -version "brtype(YOUR BRANCH NAME) && created_since(15-Nov-2010)" -print -nxname
+
+37)
+hq1-up-ecbld-904{106}: ct mkattr -replace ENFORCE_GK '"TRUE"' brtype:fvt_main@/vobs/multisite/intgtest
+Created attribute "ENFORCE_GK" on "fvt_main".
+hq1-up-ecbld-904{107}:
+
+ct mkattr -replace  CCE_PATCH_ID = "e1"  brtype:v7.4.1e_cce_brcd_625172@/vobs/admin
+
+cleartool mkattr -nc -replace  CCE_PATCH_ID  '"e1"' brtype:v7.4.1e_cce_brcd_625172@/vobs/admin
+\"FALSE\"
+38)
+Replica command
+cleartool desc -local -l brtype:fi_mojito_dev@/<VOB> | grep replica
+
+
+39)
+
+hq1-up-ecbld-904{139}: df -kh .
+Filesystem            Size  Used Avail Use% Mounted on
+hq1-us-ntap-01:/vol/view_backups
+                      280G  277G  3.8G  99% /backup/views
+hq1-up-ecbld-904{140}: pwd
+/backup/views/all_backups
+hq1-up-ecbld-904{141}:
+
+40)
+ct findmerge /vobs/fdry -nzero -fver .../martini/LATEST -c "Merge from martini to fi_tanto_dev" -merge 
+
+
+41)
+
+info.last_release_build
+TARGET_DIR:/buildsjc/sre/SQA/fos/v7.4.1/v7.4.1
+BUILD_VIEW:swrel_v7.4.1_ga
+PREVIOUS_BUILD_LABEL:V7.4.1E_GA
+LOG_DIR:/buildsjc/sre/SQA/fos/v7.4.1/Build_Logs/v7.4.1
+
+should be 
+TARGET_DIR:/buildsjc/sre/SQA/fos/v7.4.1/v7.4.1e
+BUILD_VIEW:swrel_v7.4.1e_ga
+PREVIOUS_BUILD_LABEL:V7.4.1E_GA
+LOG_DIR:/buildsjc/sre/SQA/fos/v7.4.1/Build_Logs/v7.4.1e
+
+42)
+
+
+CI_NOTIFICATION is for ttrci checkin mail notifications
+
+bspec is for build notifications
+
+rspec is for SQA promotion notifications
+
+43)
+ct lsh -minor brtype:v8.0.1b_cce_brcd_606923@/vobs/admin
+
+44)
+http://activekb-vm.brocade.com/?q=950 for /zzz drive
+The following instructions are only applicable if you already have two personal storage partitions assigned to you, a smaller partition that is holding the storage associated with existing views and a larger partition created by SRE after receiving an approval from your manager.  
+
+1.    Clean up any files under your existing zzz storage that are no longer needed. This will save you significant time during step #4. Your current storage can be identified by running /corp/global/tools/bin/srt_my_storage_info.pl.   Many engineers still have copies of old nucleo related code in this directory.
+
+2.    Clean-up all existing views to minimize the amount of data that needs to be moved.
+
+a.    Set each of your view
+
+b.    cd /vobs/projects/springboard/make
+
+c.    make distclean
+
+ 
+
+3.    Re-run the script /corp/global/tools/bin/srt_my_storage_info.pl to confirm that the usage has dropped to a minimal amount, ideally under 1%. Please make sure to wait for 10 minutes between steps #2 and #3 to let the quota report get refreshed.
+
+ 
+
+4.    Run “rsync” wrapper to copy data over..
+
+/departments/sre/srt_rsync_zzz_data.bash 
+
+Please confirm the results of rsync operation before proceeding to the next step.  Depending upon the amount of data to be copied, this step would take a few seconds or a few hours/days.
+
+ 
+
+5.    Re-create ClearCase view storage sym-links by running the script:
+
+/departments/sre/srt_update_zzz_symlinks.bash
+
+ 
+
+6.    Set your existing view(s) and try out basic operations such as accessing files, checkouts, builds etc.
+
+ 
+
+7.    Notify SRE that you are ready to retire old storage. SRE will need to rename your old storage directory so that all newly created views use the larger storage assigned to you going forward.
+
+ 
+
+8.    After SRE is done with reclaiming your old storage, please wait for about 10 minutes and run the script /corp/global/tools/bin/srt_my_storage_info.pl to confirm that your new storage is operational. Create new views and test them out. Please note that any new views will utilize the new zzz storage only after steps #1 through #7 are completed successfully.
+
+
+ 
+45)
+
+Nightly: /buildsjc/sre/Nightly/ or /proj/meteor/nightly/
+SQA: /buildsjc/sre/SQA/
+CCE: /buildsjc/sre/CCE/
+CVR: /buildsjc/sre/CVR/
+Release: /buildsjc/sre/Released
+
+46)
+
+you can use,
+
+/usr/rational/local/bin/refresh_view -view swrel_confd_src_main_01
+
+to refresh this view when default config specs associated
+with this development branch.
+
+-----------------------------------------------------------
+To use your view for editing (checkin/checkout) please use,
+
+refresh_view -view swrel_confd_src_main_01 -edit
+
+-----------------------------------------------------------
+To use your view for builds, (i.e., to avoid any checkins
+made after a certain time to impact the build results and
+to exclude zero versions) please run,
+
+refresh_view -view swrel_confd_src_main_01 -build
+
+-----------------------------------------------------------
+To specify some time (other than the current time),
+please use
+
+refresh_view -view swrel_confd_src_main_01 -build dd-Mon-YYYY.HH:MM
+===========================================================
+To use this view now, run:
+
+cleartool setview swrel_confd_src_main_01
+
+47) ALBD ISSUE
+The below error message is due to ClearCase services being stopped on your VDI. Please start the ClearCase services:
+On your desktop menu select Start -> Run. Type “cc.cpl”, this opens up clearcase properties window. Under “Services Startup” Tab, click on “Start ClearCase” button. All your ClearCase services must be running, let us know if you still see any issue.
+
+48)How do I make non mastered unreserved checkouts by default?
+LINUX Users:
+Copy the most current set of rules from the following default .clearcase_profile.
+
+$ /bin/cp /departments/sre/Builds/Scripts/.clearcase_profile $HOME
+
+Any existing mastered or reserved checkouts in your UNIX dynamic views can be converted to desired status (unreserved and non-mastered) by running the following script from within your view context:
+
+$ /corp/global/tools/bin/convert_to_nonmastered.bash 
+
+This tool is also useful for any newly created elements. Due to a limitation of ClearCase, the above flags do not get passed on to operations such as "mkelem" that invoke the "checkout" operation implicitly. "convert_to_nonmastered.bash" can be used as a workaround immediately after adding new elements to address this inherent ClearCase limitation. 
+
+
+
+49)
+
+du - a .| sort -n -r |grep -n 20
+
+50)
+Manulal Build after Rspec update-not run in web page
+
+If the build is not in /departments/sre/transietns/fos location, update the rspec and do the 
+following:
+
+$ script v6.2.2f4.log
+$ksh
+$ set -o vi
+$ alias ct=cleartool
+$ /departments/sre/Builds/Scripts/promote_fos_to_sqa.ksh -r /scm_env_metadata/products/dev/fos/branches/v6.2.2f_cce_brcd_429815/rspec/rspec >&1 | tee -a /tmp/ v6.2.2f4.log
+
+
+51)
+SQA promotion mails afetr web build
+
+Team Track Update Log for nos7.0.1b_cce_brcd_603775_01
+Disk usage by each directory under /buildsjc/sre/SQA/fos/v7.4.1
+v7.4.1c_cvr_brcd_595324_01 is available in /buildsjc/sre/SQA/fos/v7.4.1/v7.4.1c_cvr_brcd_595324_01
+Updated next build id to v7.4.1c_cvr_brcd_595324_02
+Output for request initiated from SRE self-service portal
+
+
+52)
+CC installation
+
+
+Please use the install.bat file under \\corp\global\tools\sre\ccinstall\windows\clearcase_v7.1.2\site_maa 
+copy it to your local desktop and right click on it, Run as administrator
+
+53)uboot
+Can you pls update the uboot for the release builds and stage folder and manifest files?
+http://cmweb/mod_perl/list_linux_daily_build.pl?view=fi/fi8061
+
+Correct uboot:
+http://cmweb/mod_perl/list_linux_build_log.pl?view=fi/martini_boot_version&build=martini_boot_170117_2238
+
+Thanks,
+
+
+hq1-up-ecbld-904{104}: ct diff -ser -pre  Manifest_08061.mapping
+********************************
+<<< file 1: /scm_env_metadata/products/dev/fikx/defaults/Manifest/Manifest_08061.mapping@@/main/1
+>>> file 2: Manifest_08061.mapping
+********************************
+-----[83-85 changed to 83-84]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.bin:ICX7150/Boot
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010.bin:ICX7150/Boot
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011.bin:ICX7150/Boot
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011.bin:ICX7150/Boot
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/MN/Boot/mnz10109b012.bin:ICX7150/Boot
+-----[98-103 changed to 97-100]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.sig:ICX7150/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005nss.sig:ICX7150/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010.sig:ICX7150/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/MN/Boot/mnz10109b010nss.sig:ICX7150/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011.sig:ICX7150/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011nss.sig:ICX7150/Signatures
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011.sig:ICX7150/Signatures
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/MN/Boot/mnz10109b011nss.sig:ICX7150/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/MN/Boot/mnz10109b012.sig:ICX7150/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/MN/Boot/mnz10109b012nss.sig:ICX7150/Signatures
+-----[106-108 changed to 103-104]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.bin:ICX7250/Boot
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.bin:ICX7250/Boot
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.bin:ICX7250/Boot
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.bin:ICX7250/Boot
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012.bin:ICX7250/Boot
+-----[121-126 changed to 117-120]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.sig:ICX7250/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005nss.sig:ICX7250/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.sig:ICX7250/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010nss.sig:ICX7250/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.sig:ICX7250/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011nss.sig:ICX7250/Signatures
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.sig:ICX7250/Signatures
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011nss.sig:ICX7250/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012.sig:ICX7250/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012nss.sig:ICX7250/Signatures
+-----[129-131 changed to 123-124]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.bin:ICX7450/Boot
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.bin:ICX7450/Boot
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.bin:ICX7450/Boot
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.bin:ICX7450/Boot
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012.bin:ICX7450/Boot
+-----[142-147 changed to 135-138]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005.sig:ICX7450/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SP/Boot/spz10108b005nss.sig:ICX7450/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010.sig:ICX7450/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SP/Boot/spz10109b010nss.sig:ICX7450/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.sig:ICX7450/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011nss.sig:ICX7450/Signatures
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011.sig:ICX7450/Signatures
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SP/Boot/spz10109b011nss.sig:ICX7450/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012.sig:ICX7450/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SP/Boot/spz10109b012nss.sig:ICX7450/Signatures
+-----[150-152 changed to 141-142]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SW/Boot/swz10108b005.bin:ICX7750/Boot
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010.bin:ICX7750/Boot
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011.bin:ICX7750/Boot
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011.bin:ICX7750/Boot
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SW/Boot/swz10109b012.bin:ICX7750/Boot
+-----[161-166 changed to 151-154]-----
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SW/Boot/swz10108b005.sig:ICX7750/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10108b005_160824_0233/SW/Boot/swz10108b005nss.sig:ICX7750/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010.sig:ICX7750/Signatures
+< #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_fi_tanto_dev_boot_10109b010_161115_0905/SW/Boot/swz10109b010nss.sig:ICX7750/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011.sig:ICX7750/Signatures
+< /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011nss.sig:ICX7750/Signatures
+---
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011.sig:ICX7750/Signatures
+> #/buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b011_161221_1701/SW/Boot/swz10109b011nss.sig:ICX7750/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SW/Boot/swz10109b012.sig:ICX7750/Signatures
+> /buildsjc/sre/SQA/fi_boot_builds/linux/swrel_martini_boot_10109b012_170117_2238/SW/Boot/swz10109b012nss.sig:ICX7750/Signatures
+hq1-up-ecbld-904{105}:
+
+
+54) Stopped crontab per request.
+
+## Crontab for v7.2.1_hil_patch
+##
+#00 6,14 * * * /departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/v7.2.1_hil_patch/bspec/bspec_rci.emake 00 6,14 * * * /departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/v7.2.1_hil_patch/bspec/bspec_rci.emake
+
+
+##############################################
+## Crontab for v7.4.0_ins_patch
+##
+#30 6 * * * /departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/v7.4.0_ins_patch/bspec/bspec.rci.emake
+##
+
+
+
+55)C:\Users\ekaliyap>netuser \domain kanagara
+'netuser' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ekaliyap>netuser\domain kanagara
+The system cannot find the path specified.
+
+C:\Users\ekaliyap>netuser/domain kanagara
+'netuser' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ekaliyap>net user /domain kanagara
+The request will be processed at a domain controller for domain corp.broca
+.
+
+User name                    kanagara
+Full Name                    Sarath Kumar Kanagaraj Socraties (CW)
+Comment                      Temporary
+User's comment
+Country code                 000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            3/14/2017 3:08:23 PM
+Password expires             6/12/2017 3:08:23 PM
+Password changeable          3/14/2017 3:08:23 PM
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script
+User profile
+Home directory
+Last logon                   3/16/2017 12:01:41 PM
+
+Logon hours allowed          All
+
+Local Group Memberships
+Global Group memberships     *Domain Users         *SG-Accounts-All
+                             *sw-team              *SG-Engineering
+                             *project-users-corp   *rel-con3
+                             *rel-con1             *ProofPoint-EndUserDig
+                             *rel-con2
+The command completed successfully.
+
+
+56)
+hq1-up-ecbld-904{109}: ct setview oss_fos_linux_dev
+cleartool: Error: View tag not found: "oss_fos_linux_dev".
+hq1-up-ecbld-904{110}: makeview -pat oss_fos_linux_dev
+==================================================
+Please specify the index number associated with
+your project (between 1 and 1)
+Input 0 to abort
+==================================================
+ 0      Abort
+ 1  oss_fos_linux_dev                    swrel_oss_fos_linux_dev_01
+1
+Created view.
+Host-local path: ccvw5:/vws1/swrel_oss_fos_linux_dev_01.vws
+Global path:     /net/ccvw5/vws1/swrel_oss_fos_linux_dev_01.vws
+It has the following rights:
+User : swrel    : rwx
+Group: sw-team  : r-x
+Other:          : ---
+======================================================================
+View swrel_oss_fos_linux_dev_01 was successfully created
+======================================================================
+
+You can use,
+
+/usr/rational/local/bin/refresh_view -view swrel_oss_fos_linux_dev_01
+
+to refresh this view when default config specs associated
+with this development branch.
+
+-----------------------------------------------------------
+To use your view for editing (checkin/checkout) please use,
+
+refresh_view -view swrel_oss_fos_linux_dev_01 -edit
+
+-----------------------------------------------------------
+To use your view for builds, (i.e., to avoid any checkins
+made after a certain time to impact the build results and
+to exclude zero versions) please run,
+
+refresh_view -view swrel_oss_fos_linux_dev_01 -build
+
+-----------------------------------------------------------
+To specify some time (other than the current time),
+please use
+
+refresh_view -view swrel_oss_fos_linux_dev_01 -build dd-Mon-YYYY.HH:MM
+===========================================================
+To use this view now, run:
+
+cleartool setview swrel_oss_fos_linux_dev_01
+
+-----------------------------------------------------------
+hq1-up-ecbld-904{111}: cleartool setview swrel_oss_fos_linux_dev_01
+No such map hosts.byname. Reason: No such map in server's domain
+setting DISPLAY to hcl-d0q9j6amb2.corp.brocade.com:0.0
+hq1-up-ecbld-904{101}: ct desc /vobs/projects/springboard/target26/oss-binaries-ppc-gcc-4.9.2-eglibc-2.19.tar
+version "/vobs/projects/springboard/target26/oss-binaries-ppc-gcc-4.9.2-eglibc-2.19.tar@@/main/oss_fos_linux_dev/23"
+  created 2017-03-16T22:39:57-07:00 by Linda Thadeus (lthadeus.sw-team@hq1-up-swe-06)
+  "RCI:
+   TASK_ID:ENABLING_WDT
+   TECHNICAL_COMMENTS:enabled wdt in inittab and oss updated
+   TESTED_ON:na
+   TESTED_BY:na
+
+   ========= Information related to Tests Run info (first 512 bytes) ===========
+   na
+   REVIEWERS:na
+   "
+  Element Protection:
+    User : vobadm   : r--
+    Group: sw-team  : r--
+    Other:          : r--
+  element type: compressed_file
+  predecessor version: /main/oss_fos_linux_dev/22
+  Attributes:
+    CIApproved = "TRUE"
+    ApprovedBY = "kramasa"
+    OSS_BUILD_ID = "oss_fos_linux_dev_170316_2017"
+hq1-up-ecbld-904{102}:
+
+57)
+swrel@bri-up-swe-01 ~]$ which makeview
+/usr/rational/local/bin/makeview
+[swrel@bri-up-swe-01 ~]$
+58) config spec changes
+erform the following steps, to update the config spec using dynamic or snapshot view.
+
+1.    Setup mainlatest view using the following commands.
+
+ct setview <your_userid>_mainlatest
+
+cd /scm_env_metadata/products/dev/<product>/branches/<branch>
+
+For example:
+
+cd /scm_env_metadata/products/dev/prism/branches/prism_120_dev
+
+ 
+
+2.    Checkout view_config_spec.txt file using the following command.
+ct co view_config_spec.txt
+
+ 
+
+3.    Edit and update view_config_spec.txt file. 
+
+ 
+
+4.    Check-in view_config_spec.txt file after changes are made using the following command.
+ct ci view_config_spec.txt
+
+An e-mail notification is sent to the alias associated with the check-in file (if any).
+
+
+hq1-up-ecbld-904{110}: ct diff -ser -pre view_config_spec.txt
+********************************
+<<< file 1: /scm_env_metadata/products/dev/fikx/branches/fi_mojito2_dev/view_config_spec.txt@@/main/1
+>>> file 2: view_config_spec.txt
+********************************
+-----[25 changed to 25-26]-----
+< element /scm_dev_fi_oss/... /main/{!created_since(20-Mar-2017.00:21:04)}
+---
+> element /scm_dev_fi_oss/... /main/LATEST
+> #element /scm_dev_fi_oss/... /main/{!created_since(20-Mar-2017.00:21:04)}
+hq1-up-ecbld-904{111}: pwd\
+?
+/scm_env_metadata/products/dev/fikx/branches/fi_mojito2_dev
+hq1-up-ecbld-904{112}:
+
+58)
+
+Shared VDI information is available under: http://activekb-vm.brocade.com/?q=836
+
+59)ct find . -version "lbtype (AQ_API_2_6_0_INITIAL_IMPORT )" -print
+
+60)
+How do I cleanup my personal storage used for ClearCase views?
+f you have run out of space, please free it up as follows.
+
+List which views are consuming this storage. The following example is for user "joe". Please substitute your login for "joe".
+ 
+$ ls -1 /zzz/work0*/joe/dyn_view_rstg
+joe_nos4.1.0_pit_a_03.stg
+joe_nos4.1.0_pit_a_04.stg
+joe_nos4.1.0_pit_a_05.stg
+
+Once these views are identified, please "cleartool setview" to each of the highlighted views and run "make distclean" in them to free up space used up by built objects.
+
+You can obtain the usage information for your personal storage at any time by running the following command from any Linux ClearCase client.
+
+$ /corp/global/tools/bin/srt_my_storage_info.pl
+61)
+Rename FAQ: http://activekb-vm.brocade.com/?q=633
+
+62)
+
+Manula Build if web page is not shown
+
+/departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/oss_2634_fos_ldap_dev/bspec/bspec
+
+ /departments/sre/Builds/Scripts/build_harness -bspec /scm_env_metadata/products/dev/fos/branches/oss_v7.3.1x_ldap_dev/bspec/bspec
+
+63)
+ECBLD
+
+ct lsview -host hq1-up-ecbld-010|grep vws1
+
+ct rmview -tag swrel_nos_fusion_dev_verif_171031_0600
+ct space -view swrel_nos7.0.x_maint_171101_1715
+ct rmview -tag <view_name>
+ct lsview -l -prop swrel_nos_main_170703_0100
+hq1-up-ecbld-010{120}: df -H .
+Filesystem             Size   Used  Avail Use% Mounted on
+/dev/mapper/vws1-lv    1.1T   961G    67G  94% /vws1
+hq1-up-ecbld-010{121}: ct rmview -tag swrel_nos7.0.x_maint_171101_1715
+
+64)how to tar and zip a folder
+
+tar -czvf  v8.2.0_beta1_pha.tar.gz  v8.2.0_beta1_pha
+
+zip -r  v8.2.0_beta1_pha.zip  v8.2.0_beta1_pha
+
+
+
+65)
+You can get a list of defects between two builds on a certain branch by running the following command:
+
+/usr/bin/perl /departments/sre/Builds/Scripts/emake_bom_diffreport.pl -old <directory of build you want to diff from/CC_Versions_and OIDs.bom> -new <directory of current build/CC_Versions_and OIDs.bom > -view <current build view> -show
+
+e.g.,
+
+/usr/bin/perl /departments/sre/Builds/Scripts/emake_bom_diffreport.pl -old /proj/sredev/nos4.1.0_pit_a_sre/nos4.1.0_pit_a_131102_1300/CC_Versions_and_OIDs.bom -new /proj/sredev/nos4.1.0_pit_a_sre/nos4.1.0_pit_a_131107_2200/CC_Versions_and_OIDs.bom -view swrel_nos4.1.0_pit_a_131107_2200 -show
+
+
+http://activekb-vm.brocade.com/?q=871
+
+66)
+Personal view storage 
+Products: NOS,SLXOS-S,SLXOS-R 
+If personal view storage is not allocated, makeview will create view in one of the shared view servers whichever machines is having more disk space, however personal view storage is allocated in /zzz/workXX partitions and this partition is used by makeview while creating views and only view’s metadata is stored in the shared servers. 
+ZZZ Quota of 180 GB will be allocated. 
+
+1. Login as swrel onto hq1-up-sreportal-1 machine. 
+2. Run the script to determine the /zzz partition /departments/sre/Scripts_and_Logs/report_zzz_allocation_status.pl –long 
+3. To create new directory for the user, -p option value can be referred from above command. /departments/sre/Scripts_and_Logs/allocate_zzz_to_new_user.ksh -p </zzz/partition> -u <USERID> 
+
+ZZZ files are auto generated and the following files can be referred, please do not edit them manually. 
+ZZZ_MAP_FILE=/departments/sre/Scripts_and_Logs/LATEST_ZZMAP 
+ZZZ_REPORT_FILE=/departments/sre/quota_report_zzz_work.report
+
+67)
+
+Start the build:
+/corp/global/tools/bin/srtbuild2.0 -product ezswitchsetup -branch ezswitchsetup6.3_discovery -testemail -srtbuild_testemail sw-rel-eng@brocade.com
+
+
+/corp/global/tools/bin/srtbuild2.0 -product ezswitchsetup –branch ezswitchsetup7.0_matador -testemail -srtbuild_testemail sw-rel-eng@brocade.com
+
+/corp/global/tools/bin/srtbuild2.0 -product ezswitchsetup -branch ezswitchsetup7.0.x_maint -testemail -srtbuild_testemail dsung@brocade.com,jewell@brocade.com
+
+
+/corp/global/tools/bin/srtbuild2.0 -product ezswitchsetup -branch ezswitchsetup7.1_eldorado -testemail -srtbuild_testemail dsung@brocade.com
+
